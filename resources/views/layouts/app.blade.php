@@ -9,6 +9,8 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link rel="stylesheet" href="{{ route('index') }}/style/style.css">
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <script src="/build/assets/app.525f5899.css" defer></script>
+   <link href="/build/assets/app.c5d9e6c4.js" rel="stylesheet">
     @yield('title')
 </head>
 
