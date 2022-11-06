@@ -69,7 +69,7 @@
         <div class="cgmi___section_5" style="background-color: #989292">
             <div class="row">
                 <div class="col-12 col-md-6 col-sm-6 col-xs-12">
-                    <img src="/images/img4.png" class="img img-responsive w-100" alt="">
+                    <img src="/images/WhatsApp Image 2022-11-03 at 9.58.06 PM.jpeg" class="img img-responsive w-100" alt="">
                 </div>
                 <div class="col-12 col-md-6 col-sm-6 col-xs-12">
                     <div class="cgmi___section_skew_cover">
