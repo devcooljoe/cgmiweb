@@ -1,0 +1,620 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+body {
+    margin: 0px auto;
+    padding: 0px auto;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.cgmi___landing_page {
+    background-image: url('/images/background1.png');
+    background-size: cover;
+    background-position-y: bottom;
+}
+
+.cgmi___landing_page_sermon {
+    background-image: url('/images/back1.png');
+    background-size: cover;
+    background-position-y: bottom;
+}
+
+.cgmi___landing_page_contact {
+    background-image: url('/images/rect5.png');
+    background-size: cover;
+}
+
+.cgmi___landing_page_book {
+    background-image: url('/images/book_background.png');
+    background-size: cover;
+
+}
+
+label span {
+    color: darkred;
+}
+
+.cgmi___contact_form_section {
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+.cgmi___opacity_black {
+    background-color: rgba(0, 0, 0, 0.501);
+}
+
+.cgmi___nav {
+    padding: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cgmi___nav_logo {
+    width: 70px;
+}
+
+.cgmi___nav_links>ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.cgmi___nav_links>ul>li {
+    margin-left: 30px;
+    text-transform: uppercase;
+
+}
+
+.cgmi___nav_links ul li a {
+    text-decoration: none;
+    color: rgb(164, 164, 164);
+    font-weight: bolder;
+    transition: all .2s ease-in;
+}
+
+.cgmi___nav_links ul li a:hover {
+    color: white;
+}
+
+.cgmi___section_pastor_pic {
+    margin-left: 100px;
+    width: 300px;
+    text-align: center;
+}
+
+.cgmi___section_pastor_pic img {
+    width: 200px;
+}
+
+.cgmi___section_pastor_pic p {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.cgmi___pagination {
+    background-color: red;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+}
+
+.cgmi___crousel_container {
+    width: 80%;
+    height: 600px;
+    padding-bottom: 50px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: 200px;
+
+}
+
+.cgmi___ministries_images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    width: 100%;
+}
+
+.cgmi___ministries_images1 {
+    background-image: url("/images/WhatsApp Image 2022-11-03 at 12.02.35 PM.jpeg");
+    background-size: contain;
+}
+
+.cgmi___ministries_images2 {
+    background-image: url("/images/WhatsApp Image 2022-11-03 at 7.29.09 PM.jpeg");
+    background-size: contain;
+
+}
+
+.cgmi___ministries_images3 {
+    background-image: url("/images/WhatsApp Image 2022-11-02 at 3.15.10 PM.jpeg");
+    background-size: contain;
+
+}
+
+.cgmi___ministries_images4 {
+    background-image: url("/images/WhatsApp Image 2022-11-03 at 2.49.41 PM.jpeg");
+    background-size: contain;
+
+}
+
+.cgmi___ministries_images5 {
+    background-image: url("/images/WhatsApp Image 2022-11-03 at 3.04.12 PM.jpeg");
+    background-size: contain;
+
+}
+
+.cgmi___ministries_images div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    transition: all .2s ease-in;
+}
+
+.cgmi___ministries_images div:hover {
+    background-color: transparent;
+}
+
+.cgmi___ministries_images div p {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cgmi___crousel_container_about {
+    height: 300px;
+
+}
+
+.cgmi___crousel_container h3 {
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 50px;
+    text-transform: capitalize;
+}
+
+.cgmi___landing_button {
+    margin-top: 50px;
+    padding: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+    outline: 1px solid white;
+    color: white;
+    text-decoration: none;
+    transition: all .2s ease-in;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.cgmi___landing_button:hover {
+    outline-color: black;
+    color: black;
+}
+
+.cgmi___section_1 {
+    padding-left: 100px;
+    padding-top: 50px;
+    margin-bottom: 40px;
+
+}
+
+.cgmi___section_1 .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cgmi___section_1 .row .col-12 img {
+    width: 90%;
+}
+
+.cgmi___section_1 .cgmi___section_skew_box {
+    background-color: #231955;
+    padding: 10px;
+    text-align: center;
+    transform: skew(50deg);
+    position: relative;
+    left: 50px;
+
+}
+
+.cgmi___section_1 .cgmi___section_skew_cover {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.cgmi___section_1 .cgmi___section_skew_box h3 {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    transform: skew(-50deg);
+}
+
+
+.cgmi___section_1 .cgmi___section_content {
+    margin-top: 40px;
+    margin-right: 100px;
+}
+
+.cgmi___section_1 .cgmi___section_content>p {
+    font-size: 20px;
+}
+
+.cgmi___section_2 {
+    background-image: url('/images/background2.jpg');
+    background-attachment: fixed;
+    background-position: right;
+    background-size: cover;
+    padding-bottom: 40px;
+}
+
+.cgmi___section_2 .cgmi___section_skew_box {
+    background-color: white;
+    padding: 15px;
+    padding-right: 40px;
+    padding-left: 40px;
+    text-align: center;
+    transform: skew(50deg);
+    position: relative;
+    left: 50px;
+    width: 70%;
+    margin-top: 20px;
+
+}
+
+.cgmi___section_2 .cgmi___section_skew_cover {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: right;
+}
+
+
+.cgmi___section_2 .cgmi___section_skew_box h3 {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    transform: skew(-50deg);
+    text-transform: uppercase;
+}
+
+.cgmi___section_2 .row {
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 20px;
+}
+
+.cgmi___section_2 .row .col {
+    display: flex;
+    margin: auto;
+}
+
+.cgmi___section_3 {
+    display: flex;
+    height: 500px;
+    width: 100%;
+    background-color: red;
+    background-image: url('/images/background3.png');
+}
+
+.cgmi___section_3 img {
+    margin: auto;
+    width: 100px;
+}
+
+.cgmi___section_4 {
+    padding: 100px;
+}
+
+.cgmi___section_4 .row div {
+    display: flex;
+    position: relative;
+    justify-content: center;
+
+}
+
+.cgmi___section_4 .row div .left img {
+    margin: auto;
+}
+
+.cgmi___section_4 .row div div img {
+    width: 200px;
+}
+
+.cgmi___section_4 .row div .d-block {
+    position: absolute;
+    bottom: 0px;
+}
+
+.cgmi___section_4 .cgmi___section_body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.cgmi___section_4 .cgmi___section_body h3 {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cgmi___section_5 {
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.cgmi___section_5 .cgmi___section_skew_box {
+    background-color: #14012C;
+    text-align: center;
+    transform: skew(50deg);
+    position: relative;
+    left: 50px;
+}
+
+.cgmi___crousel_title_first {
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+
+}
+
+.cgmi___section_5 .cgmi___section_skew_box_inner {
+    background-color: #D9D9D9;
+    padding: 10px;
+    text-align: center;
+    transform: skew(0deg);
+    position: relative;
+    left: 20px;
+
+}
+
+.cgmi___section_div_2 {
+    margin-top: 50px;
+    padding-right: 100px;
+}
+
+.cgmi___section_div_2 p {
+    font-size: 20px;
+}
+
+.cgmi___main_about_row {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 20px;
+}
+
+.cgmi___sermon_section {
+    padding-top: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.cgmi___sermon_section img {
+    height: 400px;
+}
+
+.cgmi___section_5 .cgmi___section_skew_cover {
+    width: 100%;
+    overflow: hidden;
+}
+
+.cgmi___sermon_section_second_div {
+    padding-top: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.cgmi___sermon_section_second_div_video {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cgmi___sermon_section_second_div_video_book {
+    padding: 20px;
+    padding-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #CBC8C8;
+    border-radius: 20px;
+}
+
+.cgmi___sermon_section_second_div_video img {
+    width: 300px;
+    height: 300px;
+    max-width: 100%;
+}
+
+.cgmi___sermon_section_second_div_video_book img {
+    width: 300px;
+    height: 300px;
+    max-width: 100%;
+}
+
+.cgmi___sermon_section_second_div_video_book h4 {
+    font-size: 26px;
+    margin-top: 20px;
+}
+
+.cgmi___sermon_section_second_div_video_book p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+
+.cgmi___section_5 .cgmi___section_skew_box h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+    transform: skew(-50deg);
+    text-align: center;
+}
+
+.cgmi___section_5_listview {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cgmi___section_5_listview ul {
+    list-style-type: circle;
+}
+
+.cgmi___section_5_listview ul li {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cgmi___section_2_empty {
+    height: 400px;
+}
+
+.cgmi___footer_div {
+    padding-top: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 100px;
+    background-color: #231955;
+}
+
+.cgmi___footer_div h3 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.cgmi___footer_div p {
+    color: rgb(203, 203, 203);
+    font-size: 14px;
+}
+
+.cgmi___footer_div span {
+    color: rgb(203, 203, 203);
+    font-size: 14px;
+}
+
+.cgmi___footer_div a {
+    color: rgb(203, 203, 203);
+    font-size: 14px;
+    text-decoration: none;
+    transition: all .2s ease-in;
+}
+
+.cgmi___footer_div a:hover {
+    color: white;
+}
+
+.cgmi___footer_div .row div:first-child {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.cgmi___footer_div .row div:last-child img {
+    width: 100px;
+}
+
+.cgmi_form_field_1 {
+    width: 100%;
+    padding: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background-color: rgb(203, 203, 203);
+    border: none;
+}
+
+.cgmi_form_field_2 {
+    padding: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 50px;
+    background-color: transparent;
+    font-size: 20px;
+    color: white;
+    outline: none;
+    border: 1px solid white;
+    width: 500px;
+
+
+}
+
+.cgmi_form_field_2_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.cgmi_form_button_2 {
+    padding: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    font-size: 15px;
+    color: white;
+    outline: none;
+    border: 1px solid white;
+    font-weight: normal;
+    border-radius: 50px;
+    background-color: #242F9B;
+    border: none;
+    transition: all .2s ease-in;
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+.cgmi_form_button_1 {
+    width: 100%;
+    padding: 7px;
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: rgb(203, 203, 203);
+    border: none;
+    transition: all .2s ease-in;
+}
+
+.cgmi_form_button_1:hover {
+    background-color: #231955;
+    border: 1px solid rgb(203, 203, 203);
+    color: rgb(203, 203, 203);
+}
+
+.cgmi___social {
+    width: 20px !important;
+    margin-right: 20px;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 576px) {
+    .cgmi___navbar {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
