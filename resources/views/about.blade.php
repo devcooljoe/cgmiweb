@@ -10,9 +10,7 @@
     <div class="cgmi___crousel_container cgmi___crousel_container_about">
         <div>
             <h3>The Wealthy Place Okota</h3>
-            <p class="text-center">
-                <a href="#" class="cgmi___landing_button">About</a>
-            </p>
+            
         </div>
     </div>
 @endsection

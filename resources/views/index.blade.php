@@ -6,14 +6,12 @@
 @endsection
 
 @section('headerContent')
-<div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+<div id="carouselExampleCaptions" class="carousel slide" data-interval="10000" data-bs-ride="carousel">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
             class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
             aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
@@ -22,7 +20,7 @@
                     <p class="cgmi___crousel_title_first">Welcome to</p>
                     <h3>The Wealthy Place Okota</h3>
                     <p class="text-left">
-                        <a href="#" class="cgmi___landing_button">Watch Sermon</a>
+                        <a href="/about" class="cgmi___landing_button">About Us</a>
                     </p>
                 </div>
             </div>
@@ -30,32 +28,21 @@
         <div class="carousel-item">
             <div class="cgmi___crousel_container">
                 <div>
-                    <p class="cgmi___crousel_title_first">Welcome to</p>
-                    <h3>Adipisci, quae aliquid</h3>
+                    <p class="cgmi___crousel_title_first">Sermon</p>
+                    <h3>Focus on Christ for grace to pray without ceasing</h3>
                     <p class="text-left">
-                        <a href="#" class="cgmi___landing_button">Lorem ipsum</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <div class="cgmi___crousel_container">
-                <div>
-                    <p class="cgmi___crousel_title_first">Welcome to</p>
-                    <h3>voluptatum neque praesentium</h3>
-                    <p class="text-left">
-                        <a href="#" class="cgmi___landing_button">Totam eveniet</a>
+                        <a href="/sermon" class="cgmi___landing_button">Watch Sermon</a>
                     </p>
                 </div>
             </div>
         </div>
     </div>
-    <button class="carousel-control-prev" type="button" onclick="nextBackgroundImage" data-bs-target="#carouselExampleCaptions"
+    <button id="prevButton" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
         data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="carousel-control-prev-icon " aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+    <button id="nextButton" class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
         data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
@@ -250,4 +237,5 @@
             </div>
         </div>
     </section>
+    
 @endsection

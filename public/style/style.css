@@ -7,10 +7,14 @@ body {
 }
 
 .cgmi___landing_page {
-    background-image: url('/images/background1.png');
+    background-image: url('/images/WhatsApp Image 2022-11-05 at 9.35.21 AM.jpeg');
     background-size: cover;
-    background-position-y: bottom;
+    background-position-y: top;
+    transition: background-image 0.5s ease-in-out;
+    -webkit-transition: background-image 0.5s ease-in-out;
+    -moz-transition: background-image 0.5s ease-in-out;
 }
+
 
 .cgmi___landing_page_sermon {
     background-image: url('/images/back1.png');
@@ -172,7 +176,7 @@ label span {
 }
 
 .cgmi___crousel_container_about {
-    height: 300px;
+    height: 400px;
 
 }
 
