@@ -54,7 +54,7 @@
                     <h3>Sign Up for Newsletter</h3>
                     <p>
                         To stay up to date with the
-                        Wealthy Place CGMI Okota,
+                        Wealthy Place CGMI Okota, 
                         sign up for our e-mail newsletter!
                     </p>
                     <br>
@@ -67,15 +67,15 @@
                 </div>
                 <div class="col-12 col-md-3 col-sm-3 col-xs-12">
                     <h3>Site Map</h3>
-                    <a href="#">About</a><br>
-                    <a href="#">Sermons</a><br>
-                    <a href="#">Contact Us</a><br>
-                    <a href="#">Library</a><br>
-                    <a href="#">Notifications</a><br>
+                    <a href="/about">About</a><br>
+                    <a href="/sermon">Sermons</a><br>
+                    <a href="/contact">Contact Us</a><br>
+                    <a href="/book">Library</a><br>
+                    <a href="/">Notifications</a><br>
                     <a href="#">Free will Donation</a>
                 </div>
                 <div class="col-12 col-md-4 col-sm-4 col-xs-12">
-                    <p class="text-center"><img src="/images/logo.png" class="img img-response" alt=""></p>
+                    <p class=""><img class="cgmi___footer_logo" src="/images/logo.png" class="img img-response" alt=""></p>
                     <p>
                         26 Dele Kalujolu street,Enoma
                         Bus stop Ago Palace way Okota
@@ -84,10 +84,10 @@
                     <span>Mail: info@cgmiokota.org</span><br>
                     <span>Call: +234 9048580800</span>
                     <p class="mt-5 text-left">
-                        <a href="#"><img src="/images/Vector (1).png" class="cgmi___social" alt=""></a>
-                        <a href="#"><img src="/images/Vector (2).png" class="cgmi___social" alt=""></a>
-                        <a href="#"><img src="/images/Vector (3).png" class="cgmi___social" alt=""></a>
-                        <a href="#"><img src="/images/Vector (4).png" class="cgmi___social" alt=""></a>
+                        <a target="_blank" href="https://www.facebook.com/cgmithewealthyplace"><img src="/images/Vector (1).png" class="cgmi___social" alt=""></a>
+                        <a target="_blank" href="https://www.instagram.com/cgmithewealthyplace"><img src="/images/Vector (2).png" class="cgmi___social" alt=""></a>
+                        <a target="_blank" href="https://www.youtube.com/channel/UCNFQ8IJtmdhdCIJBB429nhQ"><img src="/images/Vector (3).png" class="cgmi___social" alt=""></a>
+                        <a target="_blank" href="#"><img src="/images/Vector (4).png" class="cgmi___social" alt=""></a>
                     </p>
                 </div>
             </div>
@@ -122,7 +122,7 @@
         });
         setInterval(() => {
             $("#nextButton").trigger('click');
-        }, 5000);
+        }, 7000);
     </script>
 </body>
 

@@ -43,7 +43,7 @@ label span {
 }
 
 .cgmi___opacity_black {
-    background-color: rgba(0, 0, 0, 0.501);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .cgmi___nav {
@@ -177,6 +177,7 @@ label span {
 
 .cgmi___crousel_container_about {
     height: 400px;
+    justify-content: center;
 
 }
 
@@ -186,6 +187,9 @@ label span {
     color: white;
     margin-bottom: 50px;
     text-transform: capitalize;
+}
+.cgmi___crousel_container_about h3 {
+    font-size: 50px;
 }
 
 .cgmi___landing_button {
@@ -347,13 +351,12 @@ label span {
     align-items: center;
     justify-content: center;
     padding: 30px;
+    margin-left: 60px;
 }
 
 .cgmi___section_4 .cgmi___section_body h3 {
-    color: white;
     font-size: 24px;
     font-weight: bold;
-    background-color: black;
     padding: 20px;
     border-radius: 10px;
 }
@@ -385,6 +388,8 @@ label span {
     transform: skew(0deg);
     position: relative;
     left: 20px;
+    padding-left: 0px;
+    padding-right: 40px;
 
 }
 
@@ -485,7 +490,7 @@ label span {
 }
 
 .cgmi___section_5_listview ul li {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -493,11 +498,15 @@ label span {
     height: 400px;
 }
 
+.cgmi___footer_logo {
+    width: 200px !important;
+}
+
 .cgmi___footer_div {
-    padding-top: 100px;
+    padding-top: 50px;
     padding-left: 200px;
     padding-right: 200px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     background-color: #231955;
 }
 
@@ -509,17 +518,17 @@ label span {
 
 .cgmi___footer_div p {
     color: rgb(203, 203, 203);
-    font-size: 14px;
+    font-size: 20px;
 }
 
 .cgmi___footer_div span {
     color: rgb(203, 203, 203);
-    font-size: 14px;
+    font-size: 20px;
 }
 
 .cgmi___footer_div a {
     color: rgb(203, 203, 203);
-    font-size: 14px;
+    font-size: 20px;
     text-decoration: none;
     transition: all .2s ease-in;
 }
@@ -607,8 +616,12 @@ label span {
 }
 
 .cgmi___social {
-    width: 20px !important;
-    margin-right: 20px;
+    width: 30px !important;
+    margin-right: 30px;
+}
+.cgmi___past_name {
+    font-size: 24px;
+    font-weight: bold;
 }
 
 
