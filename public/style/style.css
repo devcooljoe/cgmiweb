@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
 body {
-    margin: 0px auto;
-    padding: 0px auto;
+    margin: 0px !important;
+    padding: 0px !important;
     font-family: 'Roboto', sans-serif !important;
+
 }
 
 .cgmi___landing_page {
@@ -22,6 +23,12 @@ body {
     background-position-y: bottom;
 }
 
+.cgmi___landing_page_donate {
+    background-image: url('/images/rect6.png');
+    background-size: cover;
+    background-position-y: bottom;
+}
+
 .cgmi___landing_page_contact {
     background-image: url('/images/rect5.png');
     background-size: cover;
@@ -30,7 +37,6 @@ body {
 .cgmi___landing_page_book {
     background-image: url('/images/book_background.png');
     background-size: cover;
-
 }
 
 label span {
@@ -57,6 +63,10 @@ label span {
 
 .cgmi___nav_logo {
     width: 70px;
+}
+
+.cgmi___nav_links {
+    transition: all .3s ease;
 }
 
 .cgmi___nav_links>ul {
@@ -113,6 +123,7 @@ label span {
     align-items: center;
     justify-content: left;
     margin-left: 200px;
+    margin-right: 200px;
 
 }
 
@@ -178,7 +189,6 @@ label span {
 .cgmi___crousel_container_about {
     height: 400px;
     justify-content: center;
-
 }
 
 .cgmi___crousel_container h3 {
@@ -188,6 +198,7 @@ label span {
     margin-bottom: 50px;
     text-transform: capitalize;
 }
+
 .cgmi___crousel_container_about h3 {
     font-size: 50px;
 }
@@ -221,6 +232,10 @@ label span {
 .cgmi___section_1 .row {
     display: flex;
     justify-content: space-between;
+}
+
+.cgmi___section_1 div:first-child img {
+    margin-top: 60px;
 }
 
 .cgmi___section_1 .row .col-12 img {
@@ -304,7 +319,7 @@ label span {
     margin-top: 20px;
 }
 
-.cgmi___section_2 .row .col {
+.cgmi___section_2 .row .col-12 {
     display: flex;
     margin: auto;
 }
@@ -619,9 +634,50 @@ label span {
     width: 30px !important;
     margin-right: 30px;
 }
+
 .cgmi___past_name {
     font-size: 24px;
     font-weight: bold;
+}
+
+.cgmi___hamburger {
+    width: 35px;
+    height: 45px;
+    display: none;
+}
+
+.cgmi___hamburger div {
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    margin-top: 5px;
+}
+
+.cgmi___forced_style_30 {
+    font-size: 30px !important;
+    text-align: center;
+}
+
+.cgmi___donate_title_div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    background-color: #231955;
+    padding: 20px;
+    font-size: 16px;
+    color: white;
+}
+
+.cgmi___donate_title_div_first_child {
+    display: flex;
+    justify-content: space-between;
+    background-color: none;
+    margin-bottom: 20px;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: bold;
+    color: black;
 }
 
 
@@ -629,9 +685,314 @@ label span {
 
 
 
+
+
+
 @media only screen and (max-width: 576px) {
-    .cgmi___navbar {
-        margin-left: 0px;
-        margin-right: 0px;
+    .cgmi___nav {
+        padding: 30px;
     }
+
+    .cgmi___crousel_container {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 50px;
+        padding-right: 50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 900px) {
+
+    .cgmi___crousel_container {
+        height: 350px;
+    }
+
+    .cgmi___contact_padding {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .cgmi___hamburger {
+        display: block;
+    }
+
+    .cgmi___nav_links {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        display: block;
+        padding: 0px;
+        background-color: #231955;
+        box-shadow: none;
+        height: 100%;
+        z-index: 99;
+        width: 0px;
+        overflow: hidden;
+    }
+
+    .cgmi___nav_links ul {
+        display: block;
+        color: white;
+        margin-top: 50px;
+    }
+
+    .cgmi___nav_links ul li a {
+        color: white;
+    }
+
+    .cgmi___nav_links ul li {
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+
+    .cgmi___footer_div {
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+
+    .cgmi___footer_div .col-12:first-child {
+        margin-top: 30px;
+    }
+
+    .cgmi___footer_div .row div:first-child {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .cgmi___footer_div .col-12 {
+        margin-bottom: 60px;
+    }
+
+    .cgmi___footer_div h3 {
+        color: white;
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .cgmi___footer_div p {
+        font-size: 16px;
+    }
+
+    .cgmi___footer_div span {
+        font-size: 16px;
+    }
+
+    .cgmi___footer_div a {
+        font-size: 16px;
+    }
+
+    .cgmi___footer_logo {
+        width: 100px !important;
+    }
+
+    .cgmi___footer_div .row div:last-child img {
+        width: 20px;
+    }
+
+    .cgmi___crousel_container {
+        margin-left: 80px !important;
+        margin-right: 80px !important;
+    }
+
+    .cgmi___crousel_container_about {
+        height: 150px;
+        justify-content: center;
+    }
+
+    .cgmi___crousel_container h3 {
+        font-size: 40px;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 50px;
+        text-transform: capitalize;
+    }
+
+    .cgmi___crousel_container_about h3 {
+        font-size: 30px;
+    }
+
+    .cgmi___section_1 {
+        padding-left: 30px;
+        padding-top: 30px;
+        margin-bottom: 30px;
+
+    }
+
+    .cgmi___section_1 div:first-child img {
+        margin-top: 0px;
+    }
+
+    .cgmi___section_1 .cgmi___section_skew_cover {
+        margin-top: 20px;
+    }
+
+    .cgmi___section_1 .cgmi___section_skew_box {
+        background-color: #231955;
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        left: 20px;
+    }
+
+    .cgmi___section_1 .cgmi___section_skew_box h3 {
+        font-size: 18px;
+    }
+
+
+    .cgmi___section_1 .cgmi___section_content {
+        margin-top: 40px;
+        margin-right: 100px;
+    }
+
+    .cgmi___section_1 .cgmi___section_content>p {
+        font-size: 16px;
+    }
+
+    .cgmi___section_2 .cgmi___section_skew_box {
+        padding: 5px;
+        padding-right: 5px;
+        padding-left: 5px;
+        left: 10px;
+    }
+
+    .cgmi___section_2 .cgmi___section_skew_box h3 {
+        font-size: 20px;
+    }
+
+    .cgmi___section_2 .row {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 20px;
+    }
+
+    .cgmi___section_2 .row .col-12 img {
+        margin-top: 20px;
+    }
+
+    .cgmi___section_2 .row .col-12 {
+        display: block;
+        margin: auto;
+    }
+
+    .cgmi___section_4 {
+        padding: 20px;
+    }
+
+    .cgmi___section_4 .row div div img {
+        width: 100px;
+    }
+
+    .cgmi___section_2 .cgmi___ministries_images {
+        margin-bottom: 20px;
+    }
+
+
+    .cgmi___section_5 {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 20px;
+    }
+
+    .cgmi___section_5 .cgmi___section_skew_cover {
+        margin-top: 20px;
+    }
+
+    .cgmi___section_5 .cgmi___section_skew_box h3 {
+        font-size: 14px;
+    }
+
+    .cgmi___section_5 .cgmi___section_skew_box_inner {
+        padding-right: 30px;
+        left: 10px;
+    }
+
+
+    .cgmi___section_div_2 {
+        margin-top: 20px;
+        padding-right: 20px;
+    }
+
+    .cgmi___section_div_2 p {
+        font-size: 16px;
+    }
+
+    .cgmi___main_about_row {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+    }
+
+    .cgmi___main_about_row .col-12 img {
+        margin-bottom: 20px !important;
+    }
+
+    .cgmi___section_pastor_pic {
+        margin-left: 0px;
+    }
+
+    .cgmi___section_pastor_pic p {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+    .cgmi___forced_style_30 {
+        font-size: 16px !important;
+        text-align: center;
+    }
+
+    .cgmi___sermon_section_second_div {
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .cgmi___sermon_section {
+        padding-top: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .cgmi_form_field_2 {
+        padding: 7px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 20px;
+        border-radius: 50px;
+        background-color: transparent;
+        font-size: 20px;
+        color: white;
+        outline: none;
+        border: 1px solid white;
+        width: 100%;
+    }
+
+    .cgmi___crousel_container_book {
+        height: 400px;
+    }
+    .cgmi___donate_title_div_first_child {
+        padding: 10;
+    }
+    .cgmi___donate_title_div {
+        padding: 10;
+    }
+    
+    .cgmi___donate_title_div_first_child span {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+    .cgmi___donate_title_div span {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
 }

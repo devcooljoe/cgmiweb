@@ -54,7 +54,7 @@
     <section>
         <div class="cgmi___section_1">
             <div class="row">
-                <div class="col-12 col-md-4 col-sm-4 col-xs-12 m-auto">
+                <div class="col-12 col-md-4 col-sm-4 col-xs-12">
                     <img src="/images/pastorandmrs.jpeg" class="img img-responsive" alt="">
                 </div>
                 <div class="col-12 col-md-8 col-sm-8 col-xs-12">
@@ -138,7 +138,7 @@
         <div class="cgmi___section_4">
             <div class="row">
                 <div class="col-12 col-md-6 col-sm-6 col-xs-12">
-                    <div class="cgmi___section_body">
+                    <div class="cgmi___section_body" style="margin-bottom: 40px">
                         <h3>Download our app to stay in touch with the Wealthy Place.</h3>
                     </div>
                     <div class="d-block">
@@ -200,16 +200,16 @@
                 </div>
                 <div class="col-12 col-md-2 col-sm-2 col-xs-12"></div>
             </div>
-        </div>
+        </div> 
     </section>
     <section>
         <div class="cgmi___section_5">
             <div class="row">
-                <div class="col-12 col-md-6 col-sm-6 col-xs-12">
+                <div class="col-12 col-md-6 col-sm-12 col-xs-12">
                     <img src="/images/WhatsApp Image 2022-11-03 at 9.58.06 PM.jpeg" class="img img-responsive w-100"
                         alt="">
                 </div>
-                <div class="col-12 col-md-6 col-sm-6 col-xs-12">
+                <div class="col-12 col-md-6 col-sm-12 col-xs-12">
                     <div class="cgmi___section_skew_cover">
                         <div class="cgmi___section_skew_box">
                             <div class="cgmi___section_skew_box_inner">
@@ -235,7 +235,7 @@
                     <div>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.0325632569!2d3.314451629203779!3d6.505191332176234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8eea4751713d%3A0xc243acb9a4d21b45!2sChurch%20Of%20God%20Mission!5e0!3m2!1sen!2sng!4v1667858219786!5m2!1sen!2sng"
-                            width="600" height="320" style="border:0;" allowfullscreen="" loading="lazy"
+                            width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>

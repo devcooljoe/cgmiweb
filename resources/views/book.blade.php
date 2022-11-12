@@ -5,7 +5,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 @endsection
 @section('headerContent')
-    <div class="cgmi___crousel_container cgmi___crousel_container_about">
+    <div class="cgmi___crousel_container cgmi___crousel_container_about cgmi___crousel_container_book">
         <div>
             <h3 class="text-center">Intellectual growth should commence at birth and cease only at
                 death. ― Albert Einstein</h3>
@@ -16,7 +16,6 @@
                 </form>
             </div>
         </div>
-
     </div>
 @endsection
 

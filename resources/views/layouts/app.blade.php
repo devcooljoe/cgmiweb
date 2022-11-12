@@ -23,11 +23,17 @@
         {{ Session::get('page') == 'about' ? 'cgmi___landing_page' : '' }}
         {{ Session::get('page') == 'contact' ? 'cgmi___landing_page_contact' : '' }}
         {{ Session::get('page') == 'book' ? 'cgmi___landing_page_book' : '' }}
-        {{ Session::get('page') == 'sermon' ? 'cgmi___landing_page_sermon' : '' }} ">
+        {{ Session::get('page') == 'sermon' ? 'cgmi___landing_page_sermon' : '' }}
+        {{ Session::get('page') == 'donate' ? 'cgmi___landing_page_donate' : '' }} ">
             <div class="cgmi___opacity_black">
                 <nav class="cgmi___nav">
                     <div class="cgmi___nav_icon">
                         <img src="/images/logo.png" alt="" class="cgmi___nav_logo img img-responsive">
+                    </div>
+                    <div class="cgmi___hamburger">
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </div>
                     <div class="cgmi___nav_links">
                         <ul>
@@ -97,7 +103,6 @@
     <script>
         count = 1;
         $("#prevButton").click(function() {
-            console.log(count);
             if (count % 2 == 0) {
                 $("#app-background").css("background-image",
                     "url('/images/WhatsApp Image 2022-11-05 at 9.35.21 AM.jpeg')");
@@ -109,7 +114,6 @@
             }
         });
         $("#nextButton").click(function() {
-            console.log(count);
             if (count % 2 == 0) {
                 $("#app-background").css("background-image",
                     "url('/images/WhatsApp Image 2022-11-05 at 9.35.21 AM.jpeg')");
@@ -120,9 +124,26 @@
                 count++;
             }
         });
+
         setInterval(() => {
             $("#nextButton").trigger('click');
         }, 7000);
+        navCount = 0;
+        $('.cgmi___hamburger').click(function() {
+            if (navCount % 2 == 0) {
+                console.log(navCount);
+                $('.cgmi___nav_links').css('width', '70%');
+                $('.cgmi___nav_links').css('padding', '10px');
+                $('.cgmi___nav_links').css('box-shadow', '5px 0px 100px 50px rgba(0, 0, 0, 0.347)');
+            } else {
+                console.log(navCount);
+                $('.cgmi___nav_links').css('width', '0px');
+                $('.cgmi___nav_links').css('padding', '0px');
+                $('.cgmi___nav_links').css('box-shadow', 'none');
+            }
+            navCount++;
+        });
+        
     </script>
 </body>
 

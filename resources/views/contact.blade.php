@@ -15,7 +15,7 @@
 
 @section('content')
 <section>
-    <div class="row d-flex">
+    <div class="row d-flex cgmi___contact_padding">
         <div class="col-12 col-md-6 col-sm-6 col-xs-12 m-auto">
             <br><br>
             <p style="font-size: 20px">Thank you for visiting our website. Please contact us using the form below if you have any questions about our church or any of our services.</p>
@@ -75,7 +75,7 @@
                 <div>
                     <iframe style="height:400px"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7928.161207715063!2d3.305613074825276!3d6.511481590810276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8eef7c74b431%3A0x22106eb8e25fecca!2sOkota%20Estate%2C%20Ilasamaja%20102214%2C%20Lagos!5e0!3m2!1sen!2sng!4v1667216922585!5m2!1sen!2sng"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>

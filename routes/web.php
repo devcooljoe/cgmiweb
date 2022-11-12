@@ -28,7 +28,11 @@ Route::get('/book', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+Route::get('/donate', function () {
+    return view('donate');
+});
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
