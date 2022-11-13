@@ -27,110 +27,20 @@
             <br>
             <div class="cgmi___sermon_section_second_div">
                 <div class="row">
+                    @foreach ($books as $book)
                     <div class="col-12 col-md-4 col-sm-4 col-xs-12">
                         <div class="cgmi___sermon_section_second_div_video_book">
                             <div>
-                                <img src="/images/booksample.png" class="img" alt="">
-                                <h4>Title of Book</h4>
-                                <p>By Sososo and So</p>
+                                <img src="/storage/{{ $book->picture }}" class="img" alt="">
+                                <h4>{{ $book->title }}</h4>
+                                <p>by {{ $book->user->name }}</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-4 col-sm-4 col-xs-12">
-                        <div class="cgmi___sermon_section_second_div_video_book">
-                            <div>
-                                <img src="/images/booksample.png" class="img" alt="">
-                                <h4>Title of Book</h4>
-                                <p>By Sososo and So</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 col-sm-4 col-xs-12">
-                        <div class="cgmi___sermon_section_second_div_video_book">
-                            <div>
-                                <img src="/images/booksample.png" class="img" alt="">
-                                <h4>Title of Book</h4>
-                                <p>By Sososo and So</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 col-sm-4 col-xs-12">
-                        <div class="cgmi___sermon_section_second_div_video_book">
-                            <div>
-                                <img src="/images/booksample.png" class="img" alt="">
-                                <h4>Title of Book</h4>
-                                <p>By Sososo and So</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 col-sm-4 col-xs-12">
-                        <div class="cgmi___sermon_section_second_div_video_book">
-                            <div>
-                                <img src="/images/booksample.png" class="img" alt="">
-                                <h4>Title of Book</h4>
-                                <p>By Sososo and So</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 col-sm-4 col-xs-12">
-                        <div class="cgmi___sermon_section_second_div_video_book">
-                            <div>
-                                <img src="/images/booksample.png" class="img" alt="">
-                                <h4>Title of Book</h4>
-                                <p>By Sososo and So</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 col-sm-4 col-xs-12">
-                        <div class="cgmi___sermon_section_second_div_video_book">
-                            <div>
-                                <img src="/images/booksample.png" class="img" alt="">
-                                <h4>Title of Book</h4>
-                                <p>By Sososo and So</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 col-sm-4 col-xs-12">
-                        <div class="cgmi___sermon_section_second_div_video_book">
-                            <div>
-                                <img src="/images/booksample.png" class="img" alt="">
-                                <h4>Title of Book</h4>
-                                <p>By Sososo and So</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 col-sm-4 col-xs-12">
-                        <div class="cgmi___sermon_section_second_div_video_book">
-                            <div>
-                                <img src="/images/booksample.png" class="img" alt="">
-                                <h4>Title of Book</h4>
-                                <p>By Sososo and So</p>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
                 <br>
-                <div style="cgmi___pagination">
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination">
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Next">
-                                    <span class="sr-only">Next</span>
-                                    <span aria-hidden="true">&raquo;</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+                {{ $books->links() }}
             </div>
         </div>
     </section>

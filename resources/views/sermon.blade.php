@@ -18,58 +18,34 @@
         <div class="cgmi___sermon_section">
             <h3 class="text-center" style="font-size: 30px; font-weight:bold;">Recent Live Streams</h3>
             <div class="w-100 text-center">
-                <div id="fb-root"></div>
-                <!-- Your embedded video player code -->
-                <div class="fb-video" data-href="https://web.facebook.com/100026180469809/videos/2028193407571458/" data-width="500"
-                    data-show-text="false">
-                    <div class="fb-xfbml-parse-ignore">
-                        <blockquote cite="https://web.facebook.com/100026180469809/videos/2028193407571458/">
-                            <a href="https://web.facebook.com/100026180469809/videos/2028193407571458/">How to Share With Just
-                                Friends</a>
-                            <p>How to share with just friends.</p>
-                            Posted by <a href="https://www.facebook.com/facebook/">Facebook</a> on Friday, December 5, 2014
-                        </blockquote>
-                    </div>
-                </div>
+                @if ($live != null)
+                    <div id="fb-root"></div>
+                    <?php $link = preg_replace('/https:\/\/www\.youtube\.com\/watch\?v=|https:\/\/youtu.be\//', 'https://www.youtube.com/embed/', $live->link); ?>
+                    <iframe width="100%" height="450" src="{{ $link }}?controls=1">
+                    </iframe>
+                @endif
             </div>
             <div class="cgmi___sermon_section_second_div">
                 <div class="row">
-                    <div class="col-12 col-md-4 col-sm-4 col-xs-12 cgmi___sermon_section_second_div_video">
-                        <img src="/images/video.png" class="img" alt="">
-                    </div>
-                    <div class="col-12 col-md-4 col-sm-4 col-xs-12 cgmi___sermon_section_second_div_video">
-                        <img src="/images/video.png" class="img" alt="">
-                    </div>
-                    <div class="col-12 col-md-4 col-sm-4 col-xs-12 cgmi___sermon_section_second_div_video">
-                        <img src="/images/video.png" class="img" alt="">
-                    </div>
-                    <div class="col-12 col-md-4 col-sm-4 col-xs-12 cgmi___sermon_section_second_div_video">
-                        <img src="/images/video.png" class="img" alt="">
-                    </div>
-                    <div class="col-12 col-md-4 col-sm-4 col-xs-12 cgmi___sermon_section_second_div_video">
-                        <img src="/images/video.png" class="img" alt="">
-                    </div>
-                    <div class="col-12 col-md-4 col-sm-4 col-xs-12 cgmi___sermon_section_second_div_video">
-                        <img src="/images/video.png" class="img" alt="">
-                    </div>
-                    <div class="col-12 col-md-4 col-sm-4 col-xs-12 cgmi___sermon_section_second_div_video">
-                        <img src="/images/video.png" class="img" alt="">
-                    </div>
-                    <div class="col-12 col-md-4 col-sm-4 col-xs-12 cgmi___sermon_section_second_div_video">
-                        <img src="/images/video.png" class="img" alt="">
-                    </div>
-                    <div class="col-12 col-md-4 col-sm-4 col-xs-12 cgmi___sermon_section_second_div_video">
-                        <img src="/images/video.png" class="img" alt="">
-                    </div>
+                    @foreach ($messages as $message)
+                        <?php $link = preg_replace('/https:\/\/www\.youtube\.com\/watch\?v=|https:\/\/youtu.be\//', 'https://www.youtube.com/embed/', $message->link); ?>
+                        <div class="col-12 col-md-4 col-sm-4 col-xs-12 cgmi___sermon_section_second_div_video">
+                            <iframe width="100%" height="300" src="{{ $link }}?controls=1">
+                            </iframe>
+                        </div>
+                    @endforeach
                 </div>
             </div>
+            {{ $messages->links() }}
         </div>
     </section>
+    <br><br>
     <section>
         <div class="cgmi___section_5" style="background-color: #989292">
             <div class="row">
                 <div class="col-12 col-md-6 col-sm-6 col-xs-12">
-                    <img src="/images/WhatsApp Image 2022-11-03 at 9.58.06 PM.jpeg" class="img img-responsive w-100" alt="">
+                    <img src="/images/WhatsApp Image 2022-11-03 at 9.58.06 PM.jpeg" class="img img-responsive w-100"
+                        alt="">
                 </div>
                 <div class="col-12 col-md-6 col-sm-6 col-xs-12">
                     <div class="cgmi___section_skew_cover">

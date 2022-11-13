@@ -18,7 +18,7 @@
 <body>
     <header>
         <div id='app-background'
-            class=" 
+            class="
         {{ Session::get('page') == 'index' ? 'cgmi___landing_page' : '' }}
         {{ Session::get('page') == 'about' ? 'cgmi___landing_page' : '' }}
         {{ Session::get('page') == 'contact' ? 'cgmi___landing_page_contact' : '' }}
@@ -37,12 +37,12 @@
                     </div>
                     <div class="cgmi___nav_links">
                         <ul>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/about">About Us</a></li>
-                            <li><a href="/sermon">Sermon</a></li>
-                            <li><a href="/contact">Contact Us</a></li>
-                            <li><a href="/book">Library</a></li>
-                            <li><a href="/donate">Free Will Donation</a></li>
+                            <li><a href="{{ route('index') }}">Home</a></li>
+                            <li><a href="{{ route('about') }}">About Us</a></li>
+                            <li><a href="{{ route('sermon') }}">Sermon</a></li>
+                            <li><a href="{{ route('contact') }}">Contact Us</a></li>
+                            <li><a href="{{ route('book') }}">Library</a></li>
+                            <li><a href="{{ route('donate') }}">Free Will Donation</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -60,25 +60,26 @@
                     <h3>Sign Up for Newsletter</h3>
                     <p>
                         To stay up to date with the
-                        Wealthy Place CGMI Okota, 
+                        Wealthy Place CGMI Okota,
                         sign up for our e-mail newsletter!
                     </p>
                     <br>
-                    <form action="#" method="post" autocomplete="off">
+                    <form action="{{ route('newsletter.store') }}" method="post" autocomplete="off">
+                        @csrf
                         <input type="text" name="name" class="cgmi_form_field_1" placeholder="Enter your name">
-                        <input type="text" name="name" class="cgmi_form_field_1"
+                        <input type="text" name="email" class="cgmi_form_field_1"
                             placeholder="Enter your email address">
                         <input type="submit" value="Sign Up" class="cgmi_form_button_1">
                     </form>
                 </div>
                 <div class="col-12 col-md-3 col-sm-3 col-xs-12">
                     <h3>Site Map</h3>
-                    <a href="/about">About</a><br>
-                    <a href="/sermon">Sermons</a><br>
-                    <a href="/contact">Contact Us</a><br>
-                    <a href="/book">Library</a><br>
+                    <a href="{{ route('about') }}">About</a><br>
+                    <a href="{{ route('sermon') }}">Sermons</a><br>
+                    <a href="{{ route('contact') }}">Contact Us</a><br>
+                    <a href="{{ route('book') }}">Library</a><br>
                     <a href="/">Notifications</a><br>
-                    <a href="#">Free will Donation</a>
+                    <a href="{{ route('donate') }}">Free will Donation</a>
                 </div>
                 <div class="col-12 col-md-4 col-sm-4 col-xs-12">
                     <p class=""><img class="cgmi___footer_logo" src="/images/logo.png" class="img img-response" alt=""></p>
@@ -143,7 +144,7 @@
             }
             navCount++;
         });
-        
+
     </script>
 </body>
 

@@ -19,20 +19,18 @@
             <div class="col-12 col-md-6 col-sm-10 col-xs-12 m-auto">
                 <br><br>
                 <div class="cgmi___donate_title_div_first_child">
-                    <span>Account Description <span style="color:white">General Offering</span></span>
+                    <span>Account Description</span>
                     <span>Accout Number</span>
                     <span>Bank</span>
                 </div>
+                @foreach ($accounts as $account)
                 <div class="cgmi___donate_title_div">
-                    <span>CGMI Okota District General Offering Account</span>
-                    <span> 1015808120</span>
-                    <span>Zenith Bank</span>
+                    <span>{{ $account->name }}</span>
+                    <span>{{ $account->number }}</span>
+                    <span>{{ $account->bank }}</span>
                 </div>
-                <div class="cgmi___donate_title_div">
-                    <span>CGMI Okota District General Offering Account</span>
-                    <span> 1015808120</span>
-                    <span>Zenith Bank</span>
-                </div>
+                @endforeach
+                {{ $accounts->links() }}
             </div>
         </div>
     </section>
