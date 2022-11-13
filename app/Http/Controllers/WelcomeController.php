@@ -10,7 +10,9 @@ class WelcomeController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $live = Message::orderBy('id', 'DESC')->first();
+
+        return view('index', compact('live'));
     }
 
     public function about()

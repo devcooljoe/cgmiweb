@@ -108,8 +108,12 @@
         </div>
     </section>
     <section>
-        <div class="cgmi___section_3">
-            <img src="/images/play.png" class="img img-responsive m-auto" alt="">
+        <div class="w-100 text-center" style="padding: 20px">
+            @if ($live != null)
+                <?php $link = preg_replace('/https:\/\/www\.youtube\.com\/watch\?v=|https:\/\/youtu.be\//', 'https://www.youtube.com/embed/', $live->link); ?>
+                <iframe width="100%" height="500" src="{{ $link }}?controls=1">
+                </iframe>
+            @endif
         </div>
     </section>
     <section>
@@ -200,7 +204,7 @@
                 </div>
                 <div class="col-12 col-md-2 col-sm-2 col-xs-12"></div>
             </div>
-        </div> 
+        </div>
     </section>
     <section>
         <div class="cgmi___section_5">
