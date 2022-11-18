@@ -44,3 +44,7 @@ Route::middleware('auth')->group(function () {
         '/event' => EventController::class,
     ]);
 });
+
+Route::middleware('admin')->get('/register', function () {
+    return view('auth.register');
+});
