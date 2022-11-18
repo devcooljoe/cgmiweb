@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\AccountDetail;
 use App\Models\Book;
+use App\Models\Event;
 use App\Models\Message;
 
 class WelcomeController extends Controller
@@ -11,8 +12,9 @@ class WelcomeController extends Controller
     public function index()
     {
         $live = Message::orderBy('id', 'DESC')->first();
+        $events = Event::orderBy('id', 'DESC')->paginate(9);
 
-        return view('index', compact('live'));
+        return view('index', compact(['live', 'events']));
     }
 
     public function about()

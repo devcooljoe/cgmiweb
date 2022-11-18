@@ -96,6 +96,22 @@
                                 </td>
                             </tbody>
                         </table>
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th colspan="5">Events</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <td>
+                                    <a class="btn btn-primary btn-sm"
+                                        href="{{ route('event.index') }}"> Show all
+
+                                    Events</a>
+                                </td>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

@@ -30,7 +30,7 @@ class EventPolicy
      */
     public function view(User $user, Event $event)
     {
-        return $user != null;
+        return true;
     }
 
     /**
@@ -41,7 +41,7 @@ class EventPolicy
      */
     public function create(User $user)
     {
-        return $user != null;
+        return true;
     }
 
     /**
@@ -53,7 +53,7 @@ class EventPolicy
      */
     public function update(User $user, Event $event)
     {
-        return $user->id == $event->user_id;
+        return $user->admin() || $user->id == $event->user_id;
     }
 
     /**
@@ -65,7 +65,7 @@ class EventPolicy
      */
     public function delete(User $user, Event $event)
     {
-        return $user->id == $event->user_id;
+        return $user->admin() || $user->id == $event->user_id;
     }
 
     /**

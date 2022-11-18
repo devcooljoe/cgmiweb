@@ -3,6 +3,7 @@
 use App\Http\Controllers\AccountDetailController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\NewsletterController;
@@ -34,12 +35,12 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::resource('/contact', ContactController::class);
 Route::resource('/newsletter', NewsletterController::class);
-Route::resource('/event', NewsletterController::class);
 
 Route::middleware('auth')->group(function () {
     Route::resources([
         '/accountDetail' => AccountDetailController::class,
         '/book' => BookController::class,
         '/message' => MessageController::class,
+        '/event' => EventController::class,
     ]);
 });

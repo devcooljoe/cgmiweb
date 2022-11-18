@@ -9,13 +9,25 @@ use App\Models\Event;
 class EventController extends Controller
 {
     /**
+     * Create the controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->authorizeResource(Event::class, 'event');
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        $events = Event::orderBy('id', 'DESC')->paginate(20);
+
+        return view('admin.event.index', compact('events'));
     }
 
     /**
@@ -25,7 +37,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.event.create');
     }
 
     /**
@@ -36,7 +48,13 @@ class EventController extends Controller
      */
     public function store(StoreEventRequest $request)
     {
-        //
+        $picture = $request->file('picture')->store('uploads', 'public');
+        auth()->user()->event()->create([
+            'title' => $request->title,
+            'picture' => $picture,
+        ]);
+
+        return redirect()->route('event.index')->with('success', 'Event added successfully');
     }
 
     /**
@@ -58,7 +76,7 @@ class EventController extends Controller
      */
     public function edit(Event $event)
     {
-        //
+        return view('admin.event.create', compact('event'));
     }
 
     /**
@@ -70,7 +88,13 @@ class EventController extends Controller
      */
     public function update(UpdateEventRequest $request, Event $event)
     {
-        //
+        $picture = $request->file('picture')->store('uploads', 'public');
+        $event->update([
+            'title' => $request->title,
+            'picture' => $picture,
+        ]);
+
+        return redirect()->route('event.index')->with('success', 'Event updated successfully');
     }
 
     /**
@@ -81,6 +105,8 @@ class EventController extends Controller
      */
     public function destroy(Event $event)
     {
-        //
+        $event->delete();
+
+        return redirect()->route('event.index')->with('success', ' Event deleted successfully');
     }
 }

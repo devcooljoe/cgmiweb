@@ -125,21 +125,30 @@
             </div>
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
+                    @for ($i=0; $i<count($events); $i+=3)
                     <div class="carousel-item active">
                         <div class="row">
+                            @if ($i < count($events))
                             <div class="col-12 col-md-4 col-sm-4 col-xs-12">
-                                <img src="/images/WhatsApp Image 2022-11-05 at 8.35.30 AM.jpeg"
-                                    class="img img-responsive w-100" alt="">
+                                <img src="/storage/<?php echo $events[$i]['picture'] ?>"
+                                    class="img img-responsive w-100" style="height: 400px;" alt="">
                             </div>
+                            @endif
+                            @if ($i+1 < count($events))
                             <div class="col-12 col-md-4 col-sm-4 col-xs-12">
-                                <img src="/images/WhatsApp Image 2022-11-05 at 8.34.38 AM.jpeg"
-                                    class="img img-responsive w-100" alt="">
+                                <img src="/storage/<?php echo $events[$i+1]['picture'] ?>"
+                                    class="img img-responsive w-100" style="height: 400px;" alt="">
                             </div>
+                            @endif
+                            @if ($i+2 < count($events))
                             <div class="col-12 col-md-4 col-sm-4 col-xs-12">
-                                <img src="/images/Rectangle2.png" class="img img-responsive w-100" alt="">
+                                <img src="/storage/<?php echo $events[$i+2]['picture'] ?>"
+                                    class="img img-responsive w-100" style="height: 400px;" alt="">
                             </div>
+                            @endif
                         </div>
                     </div>
+                    @endfor
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
                     data-bs-slide="prev">
