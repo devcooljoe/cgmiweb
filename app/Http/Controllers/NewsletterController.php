@@ -11,7 +11,7 @@ class NewsletterController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     *
      */
     public function index()
     {
@@ -24,7 +24,7 @@ class NewsletterController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     *
      */
     public function create()
     {
@@ -35,7 +35,7 @@ class NewsletterController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \App\Http\Requests\StoreNewsletterRequest  $request
-     * @return \Illuminate\Http\Response
+     *
      */
     public function store(StoreNewsletterRequest $request)
     {
@@ -51,7 +51,7 @@ class NewsletterController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Models\Newsletter  $newsletter
-     * @return \Illuminate\Http\Response
+     *
      */
     public function show(Newsletter $newsletter)
     {
@@ -62,7 +62,7 @@ class NewsletterController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\Newsletter  $newsletter
-     * @return \Illuminate\Http\Response
+     *
      */
     public function edit(Newsletter $newsletter)
     {
@@ -74,7 +74,7 @@ class NewsletterController extends Controller
      *
      * @param  \App\Http\Requests\UpdateNewsletterRequest  $request
      * @param  \App\Models\Newsletter  $newsletter
-     * @return \Illuminate\Http\Response
+     *
      */
     public function update(UpdateNewsletterRequest $request, Newsletter $newsletter)
     {
@@ -85,7 +85,7 @@ class NewsletterController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\Newsletter  $newsletter
-     * @return \Illuminate\Http\Response
+     *
      */
     public function destroy(Newsletter $newsletter)
     {
