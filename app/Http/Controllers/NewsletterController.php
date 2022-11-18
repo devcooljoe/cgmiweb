@@ -10,11 +10,10 @@ class NewsletterController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
-     *
      */
     public function index()
     {
+        $this->middleware('auth');
         $this->authorize('viewAny', Newsletter::class);
         $newsletters = Newsletter::orderBy('id', 'DESC')->paginate(20);
 
@@ -23,8 +22,6 @@ class NewsletterController extends Controller
 
     /**
      * Show the form for creating a new resource.
-     *
-     *
      */
     public function create()
     {
@@ -35,7 +32,6 @@ class NewsletterController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \App\Http\Requests\StoreNewsletterRequest  $request
-     *
      */
     public function store(StoreNewsletterRequest $request)
     {
@@ -51,7 +47,6 @@ class NewsletterController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Models\Newsletter  $newsletter
-     *
      */
     public function show(Newsletter $newsletter)
     {
@@ -62,7 +57,6 @@ class NewsletterController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\Newsletter  $newsletter
-     *
      */
     public function edit(Newsletter $newsletter)
     {
@@ -74,7 +68,6 @@ class NewsletterController extends Controller
      *
      * @param  \App\Http\Requests\UpdateNewsletterRequest  $request
      * @param  \App\Models\Newsletter  $newsletter
-     *
      */
     public function update(UpdateNewsletterRequest $request, Newsletter $newsletter)
     {
@@ -85,10 +78,10 @@ class NewsletterController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\Newsletter  $newsletter
-     *
      */
     public function destroy(Newsletter $newsletter)
     {
+        $this->middleware('auth');
         $this->authorize('delete', $newsletter);
         $newsletter->delete();
 

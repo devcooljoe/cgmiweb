@@ -28,7 +28,9 @@
             <div class="cgmi___opacity_black">
                 <nav class="cgmi___nav">
                     <div class="cgmi___nav_icon">
-                        <img src="/images/logo.png" alt="" class="cgmi___nav_logo img img-responsive">
+                        <a href="{{ route('index') }}">
+                            <img src="/images/logo.png" alt="" class="cgmi___nav_logo img img-responsive">
+                        </a>
                     </div>
                     <div class="cgmi___hamburger">
                         <div></div>

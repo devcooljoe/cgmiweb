@@ -27,6 +27,7 @@ class StoreBookRequest extends FormRequest
             'title' => ['required', 'string'],
             'picture' => ['required', 'image'],
             'book' => ['required', 'mimes:pdf,doc,docx'],
+            'author' => ['required', 'string'],
         ];
     }
 }

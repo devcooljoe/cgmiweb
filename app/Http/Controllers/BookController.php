@@ -20,8 +20,6 @@ class BookController extends Controller
 
     /**
      * Display a listing of the resource.
-     *
-     *
      */
     public function index()
     {
@@ -32,8 +30,6 @@ class BookController extends Controller
 
     /**
      * Show the form for creating a new resource.
-     *
-     *
      */
     public function create()
     {
@@ -44,7 +40,6 @@ class BookController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \App\Http\Requests\StoreBookRequest  $request
-     *
      */
     public function store(StoreBookRequest $request)
     {
@@ -54,6 +49,7 @@ class BookController extends Controller
             'title' => $request->title,
             'picture' => $picture,
             'file' => $file,
+            'author' => $request->author,
         ]);
 
         return redirect()->route('book.index')->with('success', 'Book added successfully');
@@ -63,7 +59,6 @@ class BookController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Models\Book  $book
-     *
      */
     public function show(Book $book)
     {
@@ -74,7 +69,6 @@ class BookController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\Book  $book
-     *
      */
     public function edit(Book $book)
     {
@@ -86,7 +80,6 @@ class BookController extends Controller
      *
      * @param  \App\Http\Requests\UpdateBookRequest  $request
      * @param  \App\Models\Book  $book
-     *
      */
     public function update(UpdateBookRequest $request, Book $book)
     {
@@ -96,6 +89,7 @@ class BookController extends Controller
             'title' => $request->title,
             'picture' => $picture,
             'file' => $file,
+            'author' => $request->author,
         ]);
 
         return redirect()->route('book.index')->with('success', 'Book updated successfully');
@@ -105,7 +99,6 @@ class BookController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\Book  $book
-     *
      */
     public function destroy(Book $book)
     {

@@ -13,13 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('books', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('events', function (Blueprint $table) {
+            $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('title');
             $table->string('picture');
-            $table->string('file');
-            $table->string('author');
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('books');
+        Schema::dropIfExists('events');
     }
 };

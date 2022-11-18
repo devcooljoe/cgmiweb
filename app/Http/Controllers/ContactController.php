@@ -10,11 +10,10 @@ class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
-     *
      */
     public function index()
     {
+        $this->middleware('auth');
         $this->authorize('viewAny', Contact::class);
         $contacts = Contact::orderBy('id', 'DESC')->paginate(20);
 
@@ -23,8 +22,6 @@ class ContactController extends Controller
 
     /**
      * Show the form for creating a new resource.
-     *
-     *
      */
     public function create()
     {
@@ -34,8 +31,7 @@ class ContactController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param StoreContactRequest  $request
-     *
+     * @param  StoreContactRequest  $request
      */
     public function store(StoreContactRequest $request)
     {
@@ -53,10 +49,10 @@ class ContactController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Models\Contact  $contact
-     *
      */
     public function show(Contact $contact)
     {
+        $this->middleware('auth');
         $this->authorize('view', $contact);
 
         return view('admin.contact.show', compact('contact'));
@@ -66,7 +62,6 @@ class ContactController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\Contact  $contact
-     *
      */
     public function edit(Contact $contact)
     {
@@ -78,7 +73,6 @@ class ContactController extends Controller
      *
      * @param  \App\Http\Requests\UpdateContactRequest  $request
      * @param  \App\Models\Contact  $contact
-     *
      */
     public function update(UpdateContactRequest $request, Contact $contact)
     {
@@ -89,10 +83,10 @@ class ContactController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\Contact  $contact
-     *
      */
     public function destroy(Contact $contact)
     {
+        $this->middleware('auth');
         $this->authorize('delete', $contact);
         $contact->delete();
 

@@ -28,6 +28,7 @@
                         <thead>
                             <tr>
                                 <th>Title</th>
+                                <th>Author</th>
                                 <th>Picture</th>
                                 <th>File</th>
                                 <th><br></th>
@@ -37,6 +38,7 @@
                             @foreach ($books as $book)
                                 <tr>
                                     <td>{{ $book->title }}</td>
+                                    <td>{{ $book->author }}</td>
                                     <td><a target="_blank" href="/storage/{{ $book->picture }}">View Picture</a></td>
                                     <td><a target="_blank" href="/storage/{{ $book->file }}">View File</a></td>
                                     <td>

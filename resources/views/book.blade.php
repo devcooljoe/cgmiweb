@@ -28,15 +28,17 @@
             <div class="cgmi___sermon_section_second_div">
                 <div class="row">
                     @foreach ($books as $book)
-                    <div class="col-12 col-md-4 col-sm-4 col-xs-12">
-                        <div class="cgmi___sermon_section_second_div_video_book">
-                            <div>
-                                <img src="/storage/{{ $book->picture }}" class="img" alt="">
-                                <h4>{{ $book->title }}</h4>
-                                <p>by {{ $book->user->name }}</p>
+                        <div class="col-12 col-md-4 col-sm-4 col-xs-12">
+                            <div class="cgmi___sermon_section_second_div_video_book">
+                                <div>
+                                    <a href="/storage/{{ $book->file }}" target="_blank" rel="noopener noreferrer">
+                                        <img src="/storage/{{ $book->picture }}" class="img" alt="">
+                                    </a>
+                                    <h4>{{ $book->title }}</h4>
+                                    <p>by {{ $book->author }}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     @endforeach
                 </div>
                 <br>

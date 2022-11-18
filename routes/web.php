@@ -34,8 +34,12 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::resource('/contact', ContactController::class);
 Route::resource('/newsletter', NewsletterController::class);
+Route::resource('/event', NewsletterController::class);
+
 Route::middleware('auth')->group(function () {
-    Route::resource('/accountDetail', AccountDetailController::class);
-    Route::resource('/book', BookController::class);
-    Route::resource('/message', MessageController::class);
+    Route::resources([
+        '/accountDetail' => AccountDetailController::class,
+        '/book' => BookController::class,
+        '/message' => MessageController::class,
+    ]);
 });
