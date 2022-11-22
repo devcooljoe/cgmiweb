@@ -48,7 +48,7 @@ class EventController extends Controller
      */
     public function store(StoreEventRequest $request)
     {
-        $picture = $request->file('picture')->store('uploads', 'public');
+        $picture = $request->file('picture')->store('uploads', 'custom_public');
         auth()->user()->event()->create([
             'title' => $request->title,
             'picture' => $picture,
@@ -88,7 +88,7 @@ class EventController extends Controller
      */
     public function update(UpdateEventRequest $request, Event $event)
     {
-        $picture = $request->file('picture')->store('uploads', 'public');
+        $picture = $request->file('picture')->store('uploads', 'custom_public');
         $event->update([
             'title' => $request->title,
             'picture' => $picture,
