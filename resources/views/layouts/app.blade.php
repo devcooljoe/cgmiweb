@@ -101,8 +101,7 @@
                 </div>
             </div>
             <br>
-            <p class="text-center" style="font-size: 14px;">For the footer remember
-                © 2022 CGMI Okota. Designed by Forah Technology.</p>
+            <p class="text-center" style="font-size: 14px;">© 2022 CGMI Okota. Designed by Forah Technology.</p>
         </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
