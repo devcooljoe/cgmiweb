@@ -31,8 +31,8 @@
                         <div class="col-12 col-md-4 col-sm-4 col-xs-12">
                             <div class="cgmi___sermon_section_second_div_video_book">
                                 <div>
-                                    <a href="{{ $book->file }}" target="_blank" rel="noopener noreferrer">
-                                        <img src="{{ $book->picture }}" class="img" alt="">
+                                    <a href="/{{ $book->file }}" target="_blank" rel="noopener noreferrer">
+                                        <img src="/{{ $book->picture }}" class="img" alt="">
                                     </a>
                                     <h4>{{ $book->title }}</h4>
                                     <p>by {{ $book->author }}</p>
