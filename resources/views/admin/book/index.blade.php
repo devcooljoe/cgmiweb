@@ -39,8 +39,8 @@
                                 <tr>
                                     <td>{{ $book->title }}</td>
                                     <td>{{ $book->author }}</td>
-                                    <td><a target="_blank" href="/storage/{{ $book->picture }}">View Picture</a></td>
-                                    <td><a target="_blank" href="/storage/{{ $book->file }}">View File</a></td>
+                                    <td><a target="_blank" href="{{ $book->picture }}">View Picture</a></td>
+                                    <td><a target="_blank" href="{{ $book->file }}">View File</a></td>
                                     <td>
                                         @can('update', $book)
                                         <div style="height: 30px">

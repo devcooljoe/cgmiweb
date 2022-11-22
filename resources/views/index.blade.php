@@ -130,19 +130,19 @@
                         <div class="row">
                             @if ($i < count($events))
                             <div class="col-12 col-md-4 col-sm-4 col-xs-12">
-                                <img src="/storage/<?php echo $events[$i]['picture'] ?>"
+                                <img src="<?php echo $events[$i]['picture'] ?>"
                                     class="img img-responsive w-100" style="height: 400px;" alt="">
                             </div>
                             @endif
                             @if ($i+1 < count($events))
                             <div class="col-12 col-md-4 col-sm-4 col-xs-12">
-                                <img src="/storage/<?php echo $events[$i+1]['picture'] ?>"
+                                <img src="<?php echo $events[$i+1]['picture'] ?>"
                                     class="img img-responsive w-100" style="height: 400px;" alt="">
                             </div>
                             @endif
                             @if ($i+2 < count($events))
                             <div class="col-12 col-md-4 col-sm-4 col-xs-12">
-                                <img src="/storage/<?php echo $events[$i+2]['picture'] ?>"
+                                <img src="<?php echo $events[$i+2]['picture'] ?>"
                                     class="img img-responsive w-100" style="height: 400px;" alt="">
                             </div>
                             @endif

@@ -36,7 +36,7 @@
                             @foreach ($events as $event)
                                 <tr>
                                     <td>{{ $event->title }}</td>
-                                    <td><a target="_blank" href="/storage/{{ $event->picture }}">View Picture</a></td>
+                                    <td><a target="_blank" href="{{ $event->picture }}">View Picture</a></td>
                                     <td>
                                         @can('update', $event)
                                         <div style="height: 30px">
