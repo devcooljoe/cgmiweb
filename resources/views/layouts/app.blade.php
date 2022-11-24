@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="/style/style.css">
     <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-    {{-- <script src="/build/assets/app.525f5899.css" defer></script>
-   <link href="/build/assets/app.c5d9e6c4.js" rel="stylesheet"> --}}
+    <script src="/build/assets/app.525f5899.css" defer></script>
+    <link href="/build/assets/app.c5d9e6c4.js" rel="stylesheet">
     @yield('title')
 </head>
 

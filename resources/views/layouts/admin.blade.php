@@ -10,6 +10,8 @@
     <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <script src="/build/assets/app.525f5899.css" defer></script>
+    <link href="/build/assets/app.c5d9e6c4.js" rel="stylesheet">
     <style>
         .cgmi___dashboard {
             display: flex;
