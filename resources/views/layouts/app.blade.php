@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link rel="stylesheet" href="{{ route('index') }}/style/style.css">
+    <link rel="stylesheet" href="/style/style.css">
     <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     {{-- <script src="/build/assets/app.525f5899.css" defer></script>
@@ -84,7 +84,8 @@
                     <a href="{{ route('donate') }}">Free will Donation</a>
                 </div>
                 <div class="col-12 col-md-4 col-sm-4 col-xs-12">
-                    <p class=""><img class="cgmi___footer_logo" src="/images/logo.png" class="img img-response" alt=""></p>
+                    <p class=""><img class="cgmi___footer_logo" src="/images/logo.png" class="img img-response"
+                            alt=""></p>
                     <p>
                         26 Dele Kalujolu street,Enoma
                         Bus stop Ago Palace way Okota
@@ -93,10 +94,14 @@
                     <span>Mail: info@cgmiokota.org</span><br>
                     <span>Call: +234 9048580800</span>
                     <p class="mt-5 text-left">
-                        <a target="_blank" href="https://www.facebook.com/cgmithewealthyplace"><img src="/images/Vector (1).png" class="cgmi___social" alt=""></a>
-                        <a target="_blank" href="https://www.instagram.com/cgmithewealthyplace"><img src="/images/Vector (2).png" class="cgmi___social" alt=""></a>
-                        <a target="_blank" href="https://www.youtube.com/channel/UCNFQ8IJtmdhdCIJBB429nhQ"><img src="/images/Vector (3).png" class="cgmi___social" alt=""></a>
-                        <a target="_blank" href="#"><img src="/images/Vector (4).png" class="cgmi___social" alt=""></a>
+                        <a target="_blank" href="https://www.facebook.com/cgmithewealthyplace"><img
+                                src="/images/Vector (1).png" class="cgmi___social" alt=""></a>
+                        <a target="_blank" href="https://www.instagram.com/cgmithewealthyplace"><img
+                                src="/images/Vector (2).png" class="cgmi___social" alt=""></a>
+                        <a target="_blank" href="https://www.youtube.com/channel/UCNFQ8IJtmdhdCIJBB429nhQ"><img
+                                src="/images/Vector (3).png" class="cgmi___social" alt=""></a>
+                        <a target="_blank" href="#"><img src="/images/Vector (4).png" class="cgmi___social"
+                                alt=""></a>
                     </p>
                 </div>
             </div>
@@ -148,7 +153,6 @@
             }
             navCount++;
         });
-
     </script>
 </body>
 

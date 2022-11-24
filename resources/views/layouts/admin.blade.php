@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link rel="stylesheet" href="{{ route('index') }}/style/style.css">
+    <link rel="stylesheet" href="/style/style.css">
     <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -21,6 +21,7 @@
             padding-left: 50px;
             padding-right: 50px;
         }
+
         .card-header {
             display: flex;
             justify-content: space-between;
