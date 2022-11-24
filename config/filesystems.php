@@ -32,7 +32,7 @@ return [
 
         'custom_public' => [
             'driver' => 'local',
-            'root' => public_path(),
+            'root' => base_path(),
             'throw' => false,
         ],
 
