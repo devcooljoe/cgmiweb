@@ -45,6 +45,6 @@ Route::middleware('auth')->group(function () {
     ]);
 });
 
-Route::middleware('admin')->get('/register', function () {
-    return view('auth.register');
-});
+// Route::middleware('admin')->get('/register', function () {
+//     return view('auth.register');
+// });
