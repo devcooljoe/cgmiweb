@@ -34,7 +34,7 @@
                 <form action="{{ route('contact.store') }}" method="post">
                     @csrf
                     <div class="row">
-                        <div class="col-12 col-md-6 col-sm-6 col-xs-12">
+                        <div class="col-12 col-md-6 col-sm-6 col-xs-12 mb-3">
                             <label for="first">First Name<span>*</span></label>
                             <input required type="text" id="first" name="firstname"
                                 class="form-control form-control-lg">

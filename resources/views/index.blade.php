@@ -1,4 +1,4 @@
-<?php Session::put('page', 'index'); ?>
+@php Session::put('page', 'index') @endphp
 @extends('layouts.app')
 
 @section('title')
@@ -6,47 +6,53 @@
 @endsection
 
 @section('headerContent')
-    <div id="carouselExampleCaptions" class="carousel slide" data-interval="12000" data-bs-ride="carousel">
+    <div id="carouselExampleCaptions" class="carousel slide" data-interval="false">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
+            @if (count($heroBanners) > 1)
+                @php $count = 0 @endphp
+                @foreach ($heroBanners as $banner)
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{ $count }}"
+                        class="@if ($count <= 0) active @endif" aria-current="true"
+                        aria-label="Slide {{ $count + 1 }}"></button>
+                    @php $count++ @endphp
+                @endforeach
+            @endif
+
         </div>
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="cgmi___crousel_container">
-                    <div>
-                        <p class="cgmi___crousel_title_first">Welcome to</p>
-                        <h3>The Wealthy Place Okota</h3>
-                        <p class="text-left">
-                            <a href="/about" class="cgmi___landing_button">About Us</a>
-                        </p>
+            @php $count = 1 @endphp
+
+            @foreach ($heroBanners as $banner)
+                <div class="carousel-item @if ($count <= 1) active @endif">
+                    <div class="cgmi___crousel_container">
+                        <div>
+                            {{-- <p class="cgmi___crousel_title_first">Welcome to</p> --}}
+                            <h3>{{ $banner->title }}</h3>
+                            @if ($count <= 1)
+                                <p class="text-left">
+                                    <a href="/about" class="cgmi___landing_button">About Us</a>
+                                </p>
+                            @endif
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <div class="cgmi___crousel_container">
-                    <div>
-                        <p class="cgmi___crousel_title_first">Sermon</p>
-                        <h3>Focus on Christ for grace to pray without ceasing</h3>
-                        <p class="text-left">
-                            <a href="/sermon" class="cgmi___landing_button">Watch Sermon</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
+                @php $count++ @endphp
+            @endforeach
         </div>
-        <button id="prevButton" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon " aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button id="nextButton" class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+        @if (count($heroBanners) > 1)
+            <button id="prevButton" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+        @endif
+        @if (count($heroBanners) > 1)
+            <button id="nextButton" class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        @endif
     </div>
 @endsection
 
@@ -110,7 +116,7 @@
     <section>
         <div class="w-100 text-center" style="padding: 20px">
             @if ($live != null)
-                <?php $link = preg_replace('/https:\/\/www\.youtube\.com\/watch\?v=|https:\/\/youtu.be\//', 'https://www.youtube.com/embed/', $live->link); ?>
+                @php $link = preg_replace('/https:\/\/www\.youtube\.com\/watch\?v=|https:\/\/youtu.be\//', 'https://www.youtube.com/embed/', $live->link) @endphp
                 <iframe width="100%" height="500" src="{{ $link }}?controls=1">
                 </iframe>
             @endif
@@ -125,29 +131,32 @@
             </div>
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                    @for ($i=0; $i<count($events); $i+=3)
-                    <div class="carousel-item active">
-                        <div class="row">
-                            @if ($i < count($events))
-                            <div class="col-12 col-md-4 col-sm-4 col-xs-12">
-                                <img src="<?php echo $events[$i]['picture'] ?>"
-                                    class="img img-responsive w-100" style="height: 400px;" alt="">
+                    @for ($i = 0; $i < count($events); $i += 3)
+                        <div class="carousel-item active">
+                            <div class="row">
+                                @if ($i < count($events))
+                                    <div class="col-12 col-md-4 col-sm-4 col-xs-12">
+                                        <div class="img img-responsive w-100"
+                                            style="height: 400px; background-image: url('/{!! $events[$i]['picture'] !!}'); background-size:cover;">
+                                        </div>
+                                    </div>
+                                @endif
+                                @if ($i + 1 < count($events))
+                                    <div class="col-12 col-md-4 col-sm-4 col-xs-12">
+                                        <div class="img img-responsive w-100"
+                                            style="height: 400px; background-image: url('/{!! $events[$i + 1]['picture'] !!}'); background-size:cover;">
+                                        </div>
+                                    </div>
+                                @endif
+                                @if ($i + 2 < count($events))
+                                    <div class="col-12 col-md-4 col-sm-4 col-xs-12">
+                                        <div class="img img-responsive w-100"
+                                            style="height: 400px; background-image: url('/{!! $events[$i + 2]['picture'] !!}'); background-size:cover;">
+                                        </div>
+                                    </div>
+                                @endif
                             </div>
-                            @endif
-                            @if ($i+1 < count($events))
-                            <div class="col-12 col-md-4 col-sm-4 col-xs-12">
-                                <img src="<?php echo $events[$i+1]['picture'] ?>"
-                                    class="img img-responsive w-100" style="height: 400px;" alt="">
-                            </div>
-                            @endif
-                            @if ($i+2 < count($events))
-                            <div class="col-12 col-md-4 col-sm-4 col-xs-12">
-                                <img src="<?php echo $events[$i+2]['picture'] ?>"
-                                    class="img img-responsive w-100" style="height: 400px;" alt="">
-                            </div>
-                            @endif
                         </div>
-                    </div>
                     @endfor
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"

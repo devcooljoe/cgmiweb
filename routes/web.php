@@ -1,9 +1,11 @@
 <?php
 
 use App\Http\Controllers\AccountDetailController;
+use App\Http\Controllers\AudioMessageController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\HeroBannerController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\NewsletterController;
@@ -27,6 +29,7 @@ Auth::routes();
 Route::get('/', [WelcomeController::class, 'index'])->name('index');
 Route::get('/about', [WelcomeController::class, 'about'])->name('about');
 Route::get('/sermon', [WelcomeController::class, 'sermon'])->name('sermon');
+Route::get('/audio-sermon', [WelcomeController::class, 'audio_sermon'])->name('audio-sermon');
 Route::get('/library', [WelcomeController::class, 'book'])->name('book');
 Route::get('/contact-us', [WelcomeController::class, 'contact'])->name('contact');
 Route::get('/donate', [WelcomeController::class, 'donate'])->name('donate');
@@ -41,10 +44,12 @@ Route::middleware('auth')->group(function () {
         '/accountDetail' => AccountDetailController::class,
         '/book' => BookController::class,
         '/message' => MessageController::class,
+        '/audioMessage' => AudioMessageController::class,
+        '/heroBanner' => HeroBannerController::class,
         '/event' => EventController::class,
     ]);
 });
 
-Route::middleware('admin')->get('/register', function () {
-    return view('auth.register');
-});
+// Route::middleware('admin')->get('/register', function () {
+//     return view('auth.register');
+// });

@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\AccountDetail;
+use App\Models\AudioMessage;
 use App\Models\Book;
 use App\Models\Event;
+use App\Models\HeroBanner;
 use App\Models\Message;
 
 class WelcomeController extends Controller
@@ -13,8 +15,15 @@ class WelcomeController extends Controller
     {
         $live = Message::orderBy('id', 'DESC')->first();
         $events = Event::orderBy('id', 'DESC')->paginate(9);
+        $heroBanners = HeroBanner::all();
+        $heroList = [];
+        foreach ($heroBanners as $key => $heroBanner) {
+            array_push($heroList, ['image' => $heroBanner->picture, 'title' => $heroBanner->title]);
+        }
+        $heroBannerJson = json_encode($heroList);
 
-        return view('index', compact(['live', 'events']));
+
+        return view('index', compact(['live', 'events', 'heroBannerJson', 'heroBanners']));
     }
 
     public function about()
@@ -28,6 +37,13 @@ class WelcomeController extends Controller
         $messages = Message::orderBy('id', 'DESC')->paginate(6);
 
         return view('sermon', compact(['messages', 'live']));
+    }
+
+    public function audio_sermon()
+    {
+        $messages = AudioMessage::orderBy('id', 'DESC')->paginate(6);
+
+        return view('audio_sermon', compact('messages'));
     }
 
     public function contact()

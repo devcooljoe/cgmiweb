@@ -15,3 +15,8 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+
+/public/audios
+/public/books
+/public/build
+/public/uploads

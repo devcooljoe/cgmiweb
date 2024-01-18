@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreBookRequest;
 use App\Http\Requests\UpdateBookRequest;
 use App\Models\Book;
+use App\Models\Func;
+
 
 class BookController extends Controller
 {
@@ -43,8 +45,10 @@ class BookController extends Controller
      */
     public function store(StoreBookRequest $request)
     {
-        $picture = $request->file('picture')->store('uploads', 'public');
-        $file = $request->file('book')->store('books', 'public');
+        $picture = Func::uploadFile($_FILES["picture"], 'uploads');
+        $file = Func::uploadFile($_FILES["book"], 'books');
+        // $picture = $request->file('picture')->store('uploads', 'public');
+        // $file = $request->file('book')->store('books', 'public');
         auth()->user()->book()->create([
             'title' => $request->title,
             'picture' => $picture,
@@ -83,8 +87,10 @@ class BookController extends Controller
      */
     public function update(UpdateBookRequest $request, Book $book)
     {
-        $picture = $request->file('picture')->store('uploads', 'public');
-        $file = $request->file('book')->store('books', 'public');
+        $picture = Func::uploadFile($_FILES["picture"], 'uploads');
+        $file = Func::uploadFile($_FILES["book"], 'books');
+        // $picture = $request->file('picture')->store('uploads', 'public');
+        // $file = $request->file('book')->store('books', 'public');
         $book->update([
             'title' => $request->title,
             'picture' => $picture,

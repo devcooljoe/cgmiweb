@@ -7,11 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link rel="stylesheet" href="{{ route('index') }}/style/style.css">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
     <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-    {{-- <script src="/build/assets/app.525f5899.css" defer></script>
-   <link href="/build/assets/app.c5d9e6c4.js" rel="stylesheet"> --}}
+    {{-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
     @yield('title')
 </head>
 
@@ -42,6 +46,7 @@
                             <li><a href="{{ route('index') }}">Home</a></li>
                             <li><a href="{{ route('about') }}">About Us</a></li>
                             <li><a href="{{ route('sermon') }}">Sermon</a></li>
+                            <li><a href="{{ route('audio-sermon') }}">Audio Messages</a></li>
                             <li><a href="{{ route('contact') }}">Contact Us</a></li>
                             <li><a href="{{ route('book') }}">Library</a></li>
                             <li><a href="{{ route('donate') }}">Free Will Donation</a></li>
@@ -78,25 +83,31 @@
                     <h3>Site Map</h3>
                     <a href="{{ route('about') }}">About</a><br>
                     <a href="{{ route('sermon') }}">Sermons</a><br>
+                    <a href="{{ route('audio-sermon') }}">Audio Messages</a><br>
                     <a href="{{ route('contact') }}">Contact Us</a><br>
                     <a href="{{ route('book') }}">Library</a><br>
                     <a href="/">Notifications</a><br>
                     <a href="{{ route('donate') }}">Free will Donation</a>
                 </div>
                 <div class="col-12 col-md-4 col-sm-4 col-xs-12">
-                    <p class=""><img class="cgmi___footer_logo" src="/images/logo.png" class="img img-response" alt=""></p>
+                    <p class=""><img class="cgmi___footer_logo" src="/images/logo.png" class="img img-response"
+                            alt=""></p>
                     <p>
-                        26 Dele Kalujolu street,Enoma
+                        26 Dele Kulajolu street, Enoma
                         Bus stop Ago Palace way Okota
                         Lagos.
                     </p>
                     <span>Mail: info@cgmiokota.org</span><br>
                     <span>Call: +234 9048580800</span>
                     <p class="mt-5 text-left">
-                        <a target="_blank" href="https://www.facebook.com/cgmithewealthyplace"><img src="/images/Vector (1).png" class="cgmi___social" alt=""></a>
-                        <a target="_blank" href="https://www.instagram.com/cgmithewealthyplace"><img src="/images/Vector (2).png" class="cgmi___social" alt=""></a>
-                        <a target="_blank" href="https://www.youtube.com/channel/UCNFQ8IJtmdhdCIJBB429nhQ"><img src="/images/Vector (3).png" class="cgmi___social" alt=""></a>
-                        <a target="_blank" href="#"><img src="/images/Vector (4).png" class="cgmi___social" alt=""></a>
+                        <a target="_blank" href="https://www.facebook.com/cgmithewealthyplace"><img
+                                src="/images/Vector (1).png" class="cgmi___social" alt=""></a>
+                        <a target="_blank" href="https://www.instagram.com/cgmithewealthyplace"><img
+                                src="/images/Vector (2).png" class="cgmi___social" alt=""></a>
+                        <a target="_blank" href="https://www.youtube.com/channel/UCNFQ8IJtmdhdCIJBB429nhQ"><img
+                                src="/images/Vector (3).png" class="cgmi___social" alt=""></a>
+                        <a target="_blank" href="#"><img src="/images/Vector (4).png" class="cgmi___social"
+                                alt=""></a>
                     </p>
                 </div>
             </div>
@@ -105,34 +116,41 @@
         </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-        count = 1;
-        $("#prevButton").click(function() {
-            if (count % 2 == 0) {
-                $("#app-background").css("background-image",
-                    "url('/images/WhatsApp Image 2022-11-05 at 9.35.21 AM.jpeg')");
-                count++;
-            } else {
-                $("#app-background").css("background-image",
-                    "url('/images/WhatsApp Image 2022-11-05 at 9.25.37 AM.jpeg')");
-                count++;
-            }
-        });
-        $("#nextButton").click(function() {
-            if (count % 2 == 0) {
-                $("#app-background").css("background-image",
-                    "url('/images/WhatsApp Image 2022-11-05 at 9.35.21 AM.jpeg')");
-                count++;
-            } else {
-                $("#app-background").css("background-image",
-                    "url('/images/WhatsApp Image 2022-11-05 at 9.25.37 AM.jpeg')");
-                count++;
-            }
-        });
 
-        setInterval(() => {
-            $("#nextButton").trigger('click');
-        }, 7000);
+    <script>
+        var banners = JSON.parse('<?php echo $heroBannerJson ?? '{}'; ?>');
+
+        if (banners.length != undefined) {
+            setTimeout(() => {
+                $("#app-background").css("background-image", `url('/${banners[0].image}')`);
+                $('.carousel').carousel({
+                    interval: false,
+                });
+            }, 1);
+
+            count = 0;
+            $("#prevButton").click(function() {
+                if (count - 1 < 0) {
+                    count = banners.length - 1;
+                } else {
+                    count--;
+                }
+                $("#app-background").css("background-image", `url('/${banners[count].image}')`);
+            });
+            $("#nextButton").click(function() {
+                if (count + 1 > banners.length - 1) {
+                    count = 0;
+                } else {
+                    count++;
+                }
+                $("#app-background").css("background-image", `url('/${banners[count].image}')`);
+            });
+
+            setInterval(() => {
+                $("#nextButton").trigger('click');
+            }, 7000);
+        }
+
         navCount = 0;
         $('.cgmi___hamburger').click(function() {
             if (navCount % 2 == 0) {
@@ -148,8 +166,18 @@
             }
             navCount++;
         });
-
     </script>
+    <script>
+        function(title, audio) {
+            navigator.share({
+                title: title,
+                url: audio,
+            }).then(() => {
+                console.log('Thanks for sharing!');
+            }).catch(console.error);
+        }
+    </script>
+
 </body>
 
 

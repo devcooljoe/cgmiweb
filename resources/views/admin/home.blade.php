@@ -27,8 +27,7 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        <a class="btn btn-primary btn-sm"
-                                            href="{{ route('accountDetail.index') }}">
+                                        <a class="btn btn-primary btn-sm" href="{{ route('accountDetail.index') }}">
                                             Show Account Details</a>
                                     </td>
                                 </tr>
@@ -44,8 +43,7 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        <a class="btn btn-primary btn-sm"
-                                            href="{{ route('book.index') }}">Show all
+                                        <a class="btn btn-primary btn-sm" href="{{ route('book.index') }}">Show all
                                             Books</a>
                                     </td>
                                 </tr>
@@ -60,8 +58,7 @@
                             </thead>
                             <tbody>
                                 <td>
-                                    <a class="btn btn-primary btn-sm"
-                                        href="{{ route('message.index') }}"> Show all
+                                    <a class="btn btn-primary btn-sm" href="{{ route('message.index') }}"> Show all
                                         Messages</a>
                                 </td>
                             </tbody>
@@ -75,8 +72,7 @@
                             </thead>
                             <tbody>
                                 <td>
-                                    <a class="btn btn-primary btn-sm"
-                                        href="{{ route('contact.index') }}"> Show all
+                                    <a class="btn btn-primary btn-sm" href="{{ route('contact.index') }}"> Show all
                                         Contacts</a>
                                 </td>
                             </tbody>
@@ -90,8 +86,7 @@
                             </thead>
                             <tbody>
                                 <td>
-                                    <a class="btn btn-primary btn-sm"
-                                        href="{{ route('newsletter.index') }}"> Show all
+                                    <a class="btn btn-primary btn-sm" href="{{ route('newsletter.index') }}"> Show all
                                         Subscribers</a>
                                 </td>
                             </tbody>
@@ -105,10 +100,39 @@
                             </thead>
                             <tbody>
                                 <td>
-                                    <a class="btn btn-primary btn-sm"
-                                        href="{{ route('event.index') }}"> Show all
+                                    <a class="btn btn-primary btn-sm" href="{{ route('event.index') }}"> Show all
 
-                                    Events</a>
+                                        Events</a>
+                                </td>
+                            </tbody>
+                        </table>
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th colspan="5">Hero Banners</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <td>
+                                    <a class="btn btn-primary btn-sm" href="{{ route('heroBanner.index') }}"> Show all
+
+                                        Hero Banners</a>
+                                </td>
+                            </tbody>
+                        </table>
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th colspan="5">Audio Messages</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <td>
+                                    <a class="btn btn-primary btn-sm" href="{{ route('audioMessage.index') }}"> Show all
+
+                                        Audio Messages</a>
                                 </td>
                             </tbody>
                         </table>

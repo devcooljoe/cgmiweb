@@ -1,5 +1,4 @@
 <?php Session::put('page', 'about'); ?>
-<!DOCTYPE html>
 @extends('layouts.app')
 
 @section('title')
@@ -10,7 +9,7 @@
     <div class="cgmi___crousel_container cgmi___crousel_container_about">
         <div>
             <h3>The Wealthy Place Okota</h3>
-            
+
         </div>
     </div>
 @endsection
@@ -110,9 +109,10 @@
             </div>
             <div class="cgmi___section_div_2">
                 <p class="cgmi___forced_style_30">
-                    Evangelizing the lost for their total transformation spirit, soul and body, developing them into leaders.
+                    Evangelizing the lost for their total transformation spirit, soul and body, developing them into
+                    leaders.
                 </p>
-                
+
             </div>
         </div>
     </section>
@@ -120,7 +120,8 @@
         <div class="cgmi___section_5">
             <div class="row">
                 <div class="col-12 col-md-6 col-sm-6 col-xs-12">
-                    <img src="/images/WhatsApp Image 2022-11-03 at 9.58.06 PM.jpeg" class="img img-responsive w-100" alt="">
+                    <img src="/images/WhatsApp Image 2022-11-03 at 9.58.06 PM.jpeg" class="img img-responsive w-100"
+                        alt="">
                 </div>
                 <div class="col-12 col-md-6 col-sm-6 col-xs-12">
                     <div class="cgmi___section_skew_cover">

@@ -67,4 +67,14 @@ class User extends Authenticatable
     {
         return $this->hasMany(Event::class);
     }
+
+    public function audiomessage()
+    {
+        return $this->hasMany(AudioMessage::class);
+    }
+
+    public function herobanner()
+    {
+        return $this->hasMany(HeroBanner::class);
+    }
 }

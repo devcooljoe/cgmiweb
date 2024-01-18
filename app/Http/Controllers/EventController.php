@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreEventRequest;
 use App\Http\Requests\UpdateEventRequest;
 use App\Models\Event;
+use App\Models\Func;
 
 class EventController extends Controller
 {
@@ -48,7 +49,8 @@ class EventController extends Controller
      */
     public function store(StoreEventRequest $request)
     {
-        $picture = $request->file('picture')->store('uploads', 'public');
+        $picture = Func::uploadFile($_FILES["picture"], 'uploads');
+        // $picture = $request->file('picture')->store('uploads', 'public');
         auth()->user()->event()->create([
             'title' => $request->title,
             'picture' => $picture,
@@ -88,7 +90,8 @@ class EventController extends Controller
      */
     public function update(UpdateEventRequest $request, Event $event)
     {
-        $picture = $request->file('picture')->store('uploads', 'public');
+        $picture = Func::uploadFile($_FILES["picture"], 'uploads');
+        // $picture = $request->file('picture')->store('uploads', 'public');
         $event->update([
             'title' => $request->title,
             'picture' => $picture,
