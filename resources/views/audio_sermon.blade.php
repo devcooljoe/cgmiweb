@@ -36,23 +36,7 @@
             <div class="cgmi___sermon_section_second_div">
                 <div class="row">
                     @foreach ($messages as $message)
-                        <div class="col-12 col-md-4 col-sm-4 col-xs-12">
-                            <div class="cgmi___sermon_section_second_div_video_book">
-                                <div>
-                                    <audio controls>
-                                        <source src="{{ $message->audio }}" type="audio/mpeg">
-                                        Your browser does not support the audio tag.
-                                    </audio>
-                                    <h4>{{ $message->title }}</h4>
-                                    <div style="width:100%; display:flex;">
-                                        <span class="btn btn-primary btn-sm" style="margin-left:auto;"
-                                            onclick="share('{{ $message->title }}', '{{ route('index') . '/' . $message->audio }}')"
-                                            id="shareBtn">SHARE</span>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
+                        <x-audio-sermon :message="$message" />
                     @endforeach
                 </div>
                 <br>
@@ -92,9 +76,9 @@
                         </div>
                     </div>
                     <div>
-                        <iframe style="height:400px"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7928.161207715063!2d3.305613074825276!3d6.511481590810276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8eef7c74b431%3A0x22106eb8e25fecca!2sOkota%20Estate%2C%20Ilasamaja%20102214%2C%20Lagos!5e0!3m2!1sen!2sng!4v1667216922585!5m2!1sen!2sng"
-                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.0325632569!2d3.314451629203779!3d6.505191332176234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8eea4751713d%3A0xc243acb9a4d21b45!2sChurch%20Of%20God%20Mission!5e0!3m2!1sen!2sng!4v1667858219786!5m2!1sen!2sng"
+                            width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>

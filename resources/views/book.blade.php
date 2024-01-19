@@ -10,7 +10,7 @@
             <h3 class="text-center">Intellectual growth should commence at birth and cease only at
                 death. ― Albert Einstein</h3>
             <div class="cgmi_form_field_2_div">
-                <form action="#" method="get">
+                <form action="{{ route('book') }}" method="get">
                     <input type="text" name="search" class="cgmi_form_field_2" placeholder="Book/Author">
                     <input type="submit" value="search" class="cgmi_form_button_2">
                 </form>

@@ -53,7 +53,13 @@ class WelcomeController extends Controller
 
     public function book()
     {
-        $books = Book::orderBy('id', 'DESC')->paginate(20);
+        $books = null;
+        if (request('search') != null) {
+            $books = Book::where('title', 'LIKE', '%' . request('search') . '%')->orWhere('author', 'LIKE', '%' . request('search') . '%')->orderBy('id', 'DESC')->paginate(20);
+        } else {
+            $books = Book::orderBy('id', 'DESC')->paginate(20);
+        }
+
 
         return view('book', compact('books'));
     }

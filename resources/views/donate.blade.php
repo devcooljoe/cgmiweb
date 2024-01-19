@@ -24,11 +24,11 @@
                     <span>Bank</span>
                 </div>
                 @foreach ($accounts as $account)
-                <div class="cgmi___donate_title_div">
-                    <span>{{ $account->name }}</span>
-                    <span>{{ $account->number }}</span>
-                    <span>{{ $account->bank }}</span>
-                </div>
+                    <div class="cgmi___donate_title_div">
+                        <span>{{ $account->name }}</span>
+                        <span>{{ $account->number }}</span>
+                        <span>{{ $account->bank }}</span>
+                    </div>
                 @endforeach
                 {{ $accounts->links() }}
             </div>
@@ -65,9 +65,9 @@
                         </div>
                     </div>
                     <div>
-                        <iframe style="height:400px"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7928.161207715063!2d3.305613074825276!3d6.511481590810276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8eef7c74b431%3A0x22106eb8e25fecca!2sOkota%20Estate%2C%20Ilasamaja%20102214%2C%20Lagos!5e0!3m2!1sen!2sng!4v1667216922585!5m2!1sen!2sng"
-                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.0325632569!2d3.314451629203779!3d6.505191332176234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8eea4751713d%3A0xc243acb9a4d21b45!2sChurch%20Of%20God%20Mission!5e0!3m2!1sen!2sng!4v1667858219786!5m2!1sen!2sng"
+                            width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>

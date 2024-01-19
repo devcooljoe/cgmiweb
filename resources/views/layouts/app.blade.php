@@ -36,10 +36,10 @@
                             <img src="/images/logo.png" alt="" class="cgmi___nav_logo img img-responsive">
                         </a>
                     </div>
-                    <div class="cgmi___hamburger">
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                    <div class="cgmi___hamburger hamburger_handle_click">
+                        <div class="hamburger_handle_click"></div>
+                        <div class="hamburger_handle_click"></div>
+                        <div class="hamburger_handle_click"></div>
                     </div>
                     <div class="cgmi___nav_links">
                         <ul>
@@ -106,13 +106,17 @@
                                 src="/images/Vector (2).png" class="cgmi___social" alt=""></a>
                         <a target="_blank" href="https://www.youtube.com/channel/UCNFQ8IJtmdhdCIJBB429nhQ"><img
                                 src="/images/Vector (3).png" class="cgmi___social" alt=""></a>
-                        <a target="_blank" href="#"><img src="/images/Vector (4).png" class="cgmi___social"
-                                alt=""></a>
+                        <a target="_blank" href="https://twitter.com/cgmglobal"><img src="/images/Vector (4).png"
+                                class="cgmi___social" alt=""></a>
                     </p>
                 </div>
             </div>
             <br>
-            <p class="text-center" style="font-size: 14px;">© 2022 CGMI Okota. Designed by Forah Technology.</p>
+            <p class="text-center" style="font-size: 14px;">©
+                <script>
+                    document.write(new Date().getFullYear())
+                </script> CGMI Okota. Designed by Forah Technology.
+            </p>
         </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -121,61 +125,61 @@
         var banners = JSON.parse('<?php echo $heroBannerJson ?? '{}'; ?>');
 
         if (banners.length != undefined) {
-            setTimeout(() => {
-                $("#app-background").css("background-image", `url('/${banners[0].image}')`);
-                $('.carousel').carousel({
-                    interval: false,
-                });
+            setTimeout(function() {
+                document.getElementById("app-background").style.backgroundImage = `url('/${banners[0].image}')`;
+                var carousel = new Carousel('.carousel');
             }, 1);
 
-            count = 0;
-            $("#prevButton").click(function() {
+            var count = 0;
+            document.getElementById("prevButton")?.addEventListener('click', function() {
                 if (count - 1 < 0) {
                     count = banners.length - 1;
                 } else {
                     count--;
                 }
-                $("#app-background").css("background-image", `url('/${banners[count].image}')`);
+                document.getElementById("app-background").style.backgroundImage = `url('/${banners[count].image}')`;
             });
-            $("#nextButton").click(function() {
+
+            document.getElementById("nextButton")?.addEventListener('click', function() {
                 if (count + 1 > banners.length - 1) {
                     count = 0;
                 } else {
                     count++;
                 }
-                $("#app-background").css("background-image", `url('/${banners[count].image}')`);
+                document.getElementById("app-background").style.backgroundImage = `url('/${banners[count].image}')`;
             });
 
-            setInterval(() => {
-                $("#nextButton").trigger('click');
+            setInterval(function() {
+                document.getElementById("nextButton")?.click();
             }, 7000);
         }
 
-        navCount = 0;
-        $('.cgmi___hamburger').click(function() {
-            if (navCount % 2 == 0) {
-                console.log(navCount);
-                $('.cgmi___nav_links').css('width', '70%');
-                $('.cgmi___nav_links').css('padding', '10px');
-                $('.cgmi___nav_links').css('box-shadow', '5px 0px 100px 50px rgba(0, 0, 0, 0.347)');
+        var opened = false;
+        document.body.addEventListener('click', function(event) {
+            if (!event.target.matches('.hamburger_handle_click')) {
+                if (opened) {
+                    var navLinks = document.querySelector('.cgmi___nav_links');
+                    navLinks.style.width = '0px';
+                    navLinks.style.padding = '0px';
+                    navLinks.style.boxShadow = 'none';
+                    opened = false;
+                }
             } else {
-                console.log(navCount);
-                $('.cgmi___nav_links').css('width', '0px');
-                $('.cgmi___nav_links').css('padding', '0px');
-                $('.cgmi___nav_links').css('box-shadow', 'none');
+                if (opened) {
+                    var navLinks = document.querySelector('.cgmi___nav_links');
+                    navLinks.style.width = '0px';
+                    navLinks.style.padding = '0px';
+                    navLinks.style.boxShadow = 'none';
+                    opened = false;
+                } else {
+                    var navLinks = document.querySelector('.cgmi___nav_links');
+                    navLinks.style.width = '70%';
+                    navLinks.style.padding = '10px';
+                    navLinks.style.boxShadow = '5px 0px 100px 50px rgba(0, 0, 0, 0.347)';
+                    opened = true;
+                }
             }
-            navCount++;
         });
-    </script>
-    <script>
-        function(title, audio) {
-            navigator.share({
-                title: title,
-                url: audio,
-            }).then(() => {
-                console.log('Thanks for sharing!');
-            }).catch(console.error);
-        }
     </script>
 
 </body>

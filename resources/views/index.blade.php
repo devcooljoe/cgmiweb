@@ -135,23 +135,23 @@
                         <div class="carousel-item active">
                             <div class="row">
                                 @if ($i < count($events))
-                                    <div class="col-12 col-md-4 col-sm-4 col-xs-12">
+                                    <div class="col-12 col-md-4 col-sm-4 col-xs-12 mb-3 bg-white">
                                         <div class="img img-responsive w-100"
-                                            style="height: 400px; background-image: url('/{!! $events[$i]['picture'] !!}'); background-size:cover;">
+                                            style="height: 400px; background-image: url('/{!! $events[$i]['picture'] !!}'); background-size:contain; background-repeat:no-repeat; background-position:center;">
                                         </div>
                                     </div>
                                 @endif
                                 @if ($i + 1 < count($events))
-                                    <div class="col-12 col-md-4 col-sm-4 col-xs-12">
+                                    <div class="col-12 col-md-4 col-sm-4 col-xs-12 mb-3 bg-white">
                                         <div class="img img-responsive w-100"
-                                            style="height: 400px; background-image: url('/{!! $events[$i + 1]['picture'] !!}'); background-size:cover;">
+                                            style="height: 400px; background-image: url('/{!! $events[$i + 1]['picture'] !!}'); background-size:contain; background-repeat:no-repeat; background-position:center;">
                                         </div>
                                     </div>
                                 @endif
                                 @if ($i + 2 < count($events))
-                                    <div class="col-12 col-md-4 col-sm-4 col-xs-12">
+                                    <div class="col-12 col-md-4 col-sm-4 col-xs-12 mb-3 bg-white">
                                         <div class="img img-responsive w-100"
-                                            style="height: 400px; background-image: url('/{!! $events[$i + 2]['picture'] !!}'); background-size:cover;">
+                                            style="height: 400px; background-image: url('/{!! $events[$i + 2]['picture'] !!}'); background-size:contain; background-repeat:no-repeat; background-position:center;">
                                         </div>
                                     </div>
                                 @endif
@@ -159,20 +159,22 @@
                         </div>
                     @endfor
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                @if (count($events) > 3)
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                @endif
             </div>
         </div>
     </section>
-    <section>
+    {{-- <section>
         <div class="cgmi___section_4">
             <div class="row">
                 <div class="col-12 col-md-6 col-sm-6 col-xs-12">
@@ -189,7 +191,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <section>
         <div class="cgmi___section_2">
             <div class="cgmi___section_skew_cover">
