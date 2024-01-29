@@ -47,6 +47,7 @@
                             <li><a href="{{ route('about') }}">About Us</a></li>
                             <li><a href="{{ route('sermon') }}">Sermon</a></li>
                             <li><a href="{{ route('audio-sermon') }}">Audio Messages</a></li>
+                            <li><a href="{{ route('pictures') }}">Gallery</a></li>
                             <li><a href="{{ route('contact') }}">Contact Us</a></li>
                             <li><a href="{{ route('book') }}">Library</a></li>
                             <li><a href="{{ route('donate') }}">Free Will Donation</a></li>
@@ -84,6 +85,7 @@
                     <a href="{{ route('about') }}">About</a><br>
                     <a href="{{ route('sermon') }}">Sermons</a><br>
                     <a href="{{ route('audio-sermon') }}">Audio Messages</a><br>
+                    <a href="{{ route('pictures') }}">Gallery</a><br>
                     <a href="{{ route('contact') }}">Contact Us</a><br>
                     <a href="{{ route('book') }}">Library</a><br>
                     <a href="/">Notifications</a><br>

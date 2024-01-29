@@ -7,7 +7,6 @@ use App\Http\Requests\UpdateBookRequest;
 use App\Models\Book;
 use App\Models\Func;
 
-
 class BookController extends Controller
 {
     /**
@@ -40,13 +39,11 @@ class BookController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreBookRequest  $request
      */
     public function store(StoreBookRequest $request)
     {
-        $picture = Func::uploadFile($_FILES["picture"], 'uploads');
-        $file = Func::uploadFile($_FILES["book"], 'books');
+        $picture = Func::uploadFile($_FILES['picture'], 'uploads');
+        $file = Func::uploadFile($_FILES['book'], 'books');
         // $picture = $request->file('picture')->store('uploads', 'public');
         // $file = $request->file('book')->store('books', 'public');
         auth()->user()->book()->create([
@@ -61,8 +58,6 @@ class BookController extends Controller
 
     /**
      * Display the specified resource.
-     *
-     * @param  \App\Models\Book  $book
      */
     public function show(Book $book)
     {
@@ -71,8 +66,6 @@ class BookController extends Controller
 
     /**
      * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Book  $book
      */
     public function edit(Book $book)
     {
@@ -81,14 +74,11 @@ class BookController extends Controller
 
     /**
      * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateBookRequest  $request
-     * @param  \App\Models\Book  $book
      */
     public function update(UpdateBookRequest $request, Book $book)
     {
-        $picture = Func::uploadFile($_FILES["picture"], 'uploads');
-        $file = Func::uploadFile($_FILES["book"], 'books');
+        $picture = Func::uploadFile($_FILES['picture'], 'uploads');
+        $file = Func::uploadFile($_FILES['book'], 'books');
         // $picture = $request->file('picture')->store('uploads', 'public');
         // $file = $request->file('book')->store('books', 'public');
         $book->update([
@@ -103,8 +93,6 @@ class BookController extends Controller
 
     /**
      * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Book  $book
      */
     public function destroy(Book $book)
     {

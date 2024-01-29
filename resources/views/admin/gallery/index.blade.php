@@ -7,10 +7,10 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
-                        Show all Audio Messages
-                        <a class="btn btn-primary btn-sm" style="margin-left: 10px"
-                            href="{{ route('audioMessage.create') }}"><span class="fa fa-plus"></span>
-                            New Audio Message
+                        Show all Gallery Pictures
+                        <a class="btn btn-primary btn-sm" style="margin-left: 10px" href="{{ route('gallery.create') }}"><span
+                                class="fa fa-plus"></span>
+                            New Picture
                         </a>
                     </div>
                     <div class="card-body">
@@ -32,22 +32,21 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($audioMessages as $message)
+                                @foreach ($galleries as $gallery)
                                     <tr>
-                                        <td>{!! str_replace('352', '152', $message->embed) !!}</td>
+                                        <td><a target="_blank" href="{{ $gallery->picture }}">View picture</a></td>
                                         <td>
-                                            @can('update', $message)
+                                            @can('update', $gallery)
                                                 <div style="height: 30px">
-                                                    <form action="{{ route('audioMessage.destroy', $message->id) }}"
-                                                        method="post">
+                                                    <form action="{{ route('gallery.destroy', $gallery->id) }}" method="post">
                                                         @csrf
                                                         @method('delete')
                                                         <a class="btn btn-success btn-sm" style="margin-left: 10px"
-                                                            href="{{ route('audioMessage.edit', $message->id) }}">
+                                                            href="{{ route('gallery.edit', $gallery->id) }}">
                                                             <span class="fa fa-edit"></span> Edit
                                                         </a>
                                                         <button type="submit" class="btn btn-danger btn-sm"
-                                                            href="{{ route('audioMessage.destroy', $message->id) }}">
+                                                            href="{{ route('gallery.destroy', $gallery->id) }}">
                                                             <span class="fa fa-trash"></span> Delete
                                                         </button>
                                                     </form>
@@ -59,7 +58,7 @@
                             </tbody>
                         </table>
                         <br>
-                        {{ $audioMessages->links() }}
+                        {{ $galleries->links() }}
                     </div>
                 </div>
             </div>

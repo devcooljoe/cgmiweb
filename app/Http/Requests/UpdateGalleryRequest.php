@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreAudioMessageRequest extends FormRequest
+class UpdateGalleryRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +24,8 @@ class StoreAudioMessageRequest extends FormRequest
     public function rules()
     {
         return [
-            'embed' => ['required', 'string'],
+            'title' => ['required', 'string'],
+            'picture' => ['required', 'image'],
         ];
     }
 }

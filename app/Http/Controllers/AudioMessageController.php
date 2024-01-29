@@ -44,16 +44,12 @@ class AudioMessageController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreAudioMessageRequest  $request
      * @return \Illuminate\Http\Response
      */
     public function store(StoreAudioMessageRequest $request)
     {
-        $audio = Func::uploadFile($_FILES["audio"], 'audios');
-        // $audio = $request->file('audio')->store('uploads', 'public');
         auth()->user()->audiomessage()->create([
-            'title' => $request->title,
-            'audio' => $audio,
+            'embed' => $request->embed,
         ]);
 
         return redirect()->route('audioMessage.index')->with('success', 'Audio Message added successfully');
@@ -62,7 +58,6 @@ class AudioMessageController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\AudioMessage  $audioMessage
      * @return \Illuminate\Http\Response
      */
     public function show(AudioMessage $audioMessage)
@@ -73,7 +68,6 @@ class AudioMessageController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\AudioMessage  $audioMessage
      * @return \Illuminate\Http\Response
      */
     public function edit(AudioMessage $audioMessage)
@@ -84,26 +78,20 @@ class AudioMessageController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateAudioMessageRequest  $request
-     * @param  \App\Models\AudioMessage  $audioMessage
      * @return \Illuminate\Http\Response
      */
     public function update(UpdateAudioMessageRequest $request, AudioMessage $audioMessage)
     {
-        $audio = Func::uploadFile($_FILES["audio"], 'audios');
-        // $audio = $request->file('audio')->store('uploads', 'public');
         $audioMessage->update([
-            'title' => $request->title,
-            'audio' => $audio,
+            'embed' => $request->embed,
         ]);
 
-        return redirect()->route('audioMessage.index')->with('success', 'Audio Message added successfully');
+        return redirect()->route('audioMessage.index')->with('success', 'Audio Message updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\AudioMessage  $audioMessage
      * @return \Illuminate\Http\Response
      */
     public function destroy(AudioMessage $audioMessage)

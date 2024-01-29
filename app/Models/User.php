@@ -73,6 +73,11 @@ class User extends Authenticatable
         return $this->hasMany(AudioMessage::class);
     }
 
+    public function gallery()
+    {
+        return $this->hasMany(Gallery::class);
+    }
+
     public function herobanner()
     {
         return $this->hasMany(HeroBanner::class);

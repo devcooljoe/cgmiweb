@@ -6,6 +6,7 @@ use App\Models\AccountDetail;
 use App\Models\AudioMessage;
 use App\Models\Book;
 use App\Models\Event;
+use App\Models\Gallery;
 use App\Models\HeroBanner;
 use App\Models\Message;
 
@@ -21,7 +22,6 @@ class WelcomeController extends Controller
             array_push($heroList, ['image' => $heroBanner->picture, 'title' => $heroBanner->title]);
         }
         $heroBannerJson = json_encode($heroList);
-
 
         return view('index', compact(['live', 'events', 'heroBannerJson', 'heroBanners']));
     }
@@ -46,6 +46,13 @@ class WelcomeController extends Controller
         return view('audio_sermon', compact('messages'));
     }
 
+    public function gallery()
+    {
+        $galleries = Gallery::orderBy('id', 'DESC')->paginate(20);
+
+        return view('gallery', compact('galleries'));
+    }
+
     public function contact()
     {
         return view('contact');
@@ -55,11 +62,10 @@ class WelcomeController extends Controller
     {
         $books = null;
         if (request('search') != null) {
-            $books = Book::where('title', 'LIKE', '%' . request('search') . '%')->orWhere('author', 'LIKE', '%' . request('search') . '%')->orderBy('id', 'DESC')->paginate(20);
+            $books = Book::where('title', 'LIKE', '%'.request('search').'%')->orWhere('author', 'LIKE', '%'.request('search').'%')->orderBy('id', 'DESC')->paginate(20);
         } else {
             $books = Book::orderBy('id', 'DESC')->paginate(20);
         }
-
 
         return view('book', compact('books'));
     }

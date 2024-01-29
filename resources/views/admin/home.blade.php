@@ -136,6 +136,21 @@
                                 </td>
                             </tbody>
                         </table>
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th colspan="5">Gallery</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <td>
+                                    <a class="btn btn-primary btn-sm" href="{{ route('gallery.index') }}"> Show all
+
+                                        Gallery Pictures</a>
+                                </td>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

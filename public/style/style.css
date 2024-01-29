@@ -1,14 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 
 body {
     margin: 0px !important;
     padding: 0px !important;
-    font-family: 'Roboto', sans-serif !important;
-
+    font-family: "Roboto", sans-serif !important;
 }
 
 .cgmi___landing_page {
-    background-image: url('/images/WhatsApp Image 2022-11-05 at 9.35.21 AM.jpeg');
+    background-image: url("/images/WhatsApp Image 2022-11-05 at 9.35.21 AM.jpeg");
     background-size: cover;
     background-position-y: top;
     transition: background-image 0.5s ease-in-out;
@@ -16,27 +15,25 @@ body {
     -moz-transition: background-image 0.5s ease-in-out;
 }
 
-
-
 .cgmi___landing_page_sermon {
-    background-image: url('/images/back1.png');
+    background-image: url("/images/back1.png");
     background-size: cover;
     background-position-y: bottom;
 }
 
 .cgmi___landing_page_donate {
-    background-image: url('/images/rect6.png');
+    background-image: url("/images/rect6.png");
     background-size: cover;
     background-position-y: bottom;
 }
 
 .cgmi___landing_page_contact {
-    background-image: url('/images/rect5.png');
+    background-image: url("/images/rect5.png");
     background-size: cover;
 }
 
 .cgmi___landing_page_book {
-    background-image: url('/images/book_background.png');
+    background-image: url("/images/book_background.png");
     background-size: cover;
 }
 
@@ -67,25 +64,24 @@ label span {
 }
 
 .cgmi___nav_links {
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 }
 
-.cgmi___nav_links>ul {
+.cgmi___nav_links > ul {
     display: flex;
     list-style-type: none;
 }
 
-.cgmi___nav_links>ul>li {
+.cgmi___nav_links > ul > li {
     margin-left: 30px;
     text-transform: uppercase;
-
 }
 
 .cgmi___nav_links ul li a {
     text-decoration: none;
     color: rgb(245, 245, 245);
     font-weight: bolder;
-    transition: all .2s ease-in;
+    transition: all 0.2s ease-in;
 }
 
 .cgmi___nav_links ul li a:hover {
@@ -125,9 +121,7 @@ label span {
     justify-content: left;
     margin-left: 200px;
     margin-right: 200px;
-
 }
-
 
 .cgmi___ministries_images {
     display: flex;
@@ -145,25 +139,21 @@ label span {
 .cgmi___ministries_images2 {
     background-image: url("/images/WhatsApp Image 2022-11-03 at 7.29.09 PM.jpeg");
     background-size: contain;
-
 }
 
 .cgmi___ministries_images3 {
     background-image: url("/images/WhatsApp Image 2022-11-02 at 3.15.10 PM.jpeg");
     background-size: contain;
-
 }
 
 .cgmi___ministries_images4 {
     background-image: url("/images/WhatsApp Image 2022-11-03 at 2.49.41 PM.jpeg");
     background-size: contain;
-
 }
 
 .cgmi___ministries_images5 {
     background-image: url("/images/WhatsApp Image 2022-11-03 at 3.04.12 PM.jpeg");
     background-size: contain;
-
 }
 
 .cgmi___ministries_images div {
@@ -175,7 +165,7 @@ label span {
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
-    transition: all .2s ease-in;
+    transition: all 0.2s ease-in;
 }
 
 .cgmi___ministries_images div:hover {
@@ -213,7 +203,7 @@ label span {
     outline: 1px solid white;
     color: white;
     text-decoration: none;
-    transition: all .2s ease-in;
+    transition: all 0.2s ease-in;
     border-radius: 50px;
     text-transform: uppercase;
     font-weight: bold;
@@ -228,7 +218,6 @@ label span {
     padding-left: 100px;
     padding-top: 50px;
     margin-bottom: 40px;
-
 }
 
 .cgmi___section_1 .row {
@@ -251,14 +240,12 @@ label span {
     transform: skew(50deg);
     position: relative;
     left: 50px;
-
 }
 
 .cgmi___section_1 .cgmi___section_skew_cover {
     width: 100%;
     overflow: hidden;
 }
-
 
 .cgmi___section_1 .cgmi___section_skew_box h3 {
     font-size: 30px;
@@ -267,18 +254,17 @@ label span {
     transform: skew(-50deg);
 }
 
-
 .cgmi___section_1 .cgmi___section_content {
     margin-top: 40px;
     margin-right: 100px;
 }
 
-.cgmi___section_1 .cgmi___section_content>p {
+.cgmi___section_1 .cgmi___section_content > p {
     font-size: 20px;
 }
 
 .cgmi___section_2 {
-    background-image: url('/images/background2.jpg');
+    background-image: url("/images/background2.jpg");
     background-attachment: fixed;
     background-position: right;
     background-size: cover;
@@ -296,7 +282,6 @@ label span {
     left: 50px;
     width: 70%;
     margin-top: 20px;
-
 }
 
 .cgmi___section_2 .cgmi___section_skew_cover {
@@ -305,7 +290,6 @@ label span {
     display: flex;
     justify-content: right;
 }
-
 
 .cgmi___section_2 .cgmi___section_skew_box h3 {
     font-size: 30px;
@@ -331,7 +315,7 @@ label span {
     height: 500px;
     width: 100%;
     background-color: red;
-    background-image: url('/images/background3.png');
+    background-image: url("/images/background3.png");
 }
 
 .cgmi___section_3 img {
@@ -347,7 +331,6 @@ label span {
     display: flex;
     position: relative;
     justify-content: center;
-
 }
 
 .cgmi___section_4 .row div .left img {
@@ -384,7 +367,7 @@ label span {
 }
 
 .cgmi___section_5 .cgmi___section_skew_box {
-    background-color: #14012C;
+    background-color: #14012c;
     text-align: center;
     transform: skew(50deg);
     position: relative;
@@ -395,11 +378,10 @@ label span {
     color: white;
     font-size: 35px;
     font-weight: bold;
-
 }
 
 .cgmi___section_5 .cgmi___section_skew_box_inner {
-    background-color: #D9D9D9;
+    background-color: #d9d9d9;
     padding: 10px;
     text-align: center;
     transform: skew(0deg);
@@ -407,7 +389,6 @@ label span {
     left: 20px;
     padding-left: 0px;
     padding-right: 40px;
-
 }
 
 .cgmi___section_div_2 {
@@ -460,7 +441,7 @@ label span {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #CBC8C8;
+    background-color: #cbc8c8;
     border-radius: 20px;
 }
 
@@ -485,8 +466,6 @@ label span {
     font-size: 16px;
     margin-top: 10px;
 }
-
-
 
 .cgmi___section_5 .cgmi___section_skew_box h3 {
     font-size: 20px;
@@ -547,7 +526,7 @@ label span {
     color: rgb(203, 203, 203);
     font-size: 20px;
     text-decoration: none;
-    transition: all .2s ease-in;
+    transition: all 0.2s ease-in;
 }
 
 .cgmi___footer_div a:hover {
@@ -586,8 +565,6 @@ label span {
     outline: none;
     border: 1px solid white;
     width: 500px;
-
-
 }
 
 .cgmi_form_field_2_div {
@@ -609,9 +586,9 @@ label span {
     border: 1px solid white;
     font-weight: normal;
     border-radius: 50px;
-    background-color: #242F9B;
+    background-color: #242f9b;
     border: none;
-    transition: all .2s ease-in;
+    transition: all 0.2s ease-in;
     text-transform: uppercase;
     margin: 0px;
 }
@@ -623,7 +600,7 @@ label span {
     border-radius: 20px;
     background-color: rgb(203, 203, 203);
     border: none;
-    transition: all .2s ease-in;
+    transition: all 0.2s ease-in;
 }
 
 .cgmi_form_button_1:hover {
@@ -682,14 +659,6 @@ label span {
     color: black;
 }
 
-
-
-
-
-
-
-
-
 @media only screen and (max-width: 576px) {
     .cgmi___nav {
         padding: 30px;
@@ -703,16 +672,17 @@ label span {
     }
 }
 
+.show-share-on-mobile {
+    display: none;
+}
 
-
-
-
-
-
-
+@media only screen and (max-width: 576px) {
+    .show-share-on-mobile {
+        display: flex;
+    }
+}
 
 @media only screen and (max-width: 900px) {
-
     .cgmi___crousel_container {
         height: 350px;
     }
@@ -827,7 +797,6 @@ label span {
         padding-left: 30px;
         padding-top: 30px;
         margin-bottom: 30px;
-
     }
 
     .cgmi___section_1 div:first-child img {
@@ -850,13 +819,12 @@ label span {
         font-size: 18px;
     }
 
-
     .cgmi___section_1 .cgmi___section_content {
         margin-top: 40px;
         margin-right: 20px;
     }
 
-    .cgmi___section_1 .cgmi___section_content>p {
+    .cgmi___section_1 .cgmi___section_content > p {
         font-size: 16px;
     }
 
@@ -898,7 +866,6 @@ label span {
         margin-bottom: 20px;
     }
 
-
     .cgmi___section_5 {
         padding-left: 20px;
         padding-right: 20px;
@@ -917,7 +884,6 @@ label span {
         padding-right: 30px;
         left: 10px;
     }
-
 
     .cgmi___section_div_2 {
         margin-top: 20px;
@@ -999,5 +965,4 @@ label span {
         padding-right: 5px;
         padding-left: 5px;
     }
-
 }

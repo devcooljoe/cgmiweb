@@ -24,8 +24,7 @@ class UpdateAudioMessageRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => ['required', 'string'],
-            'audio' => ['required', 'mimes:mp3'],
+            'embed' => ['required', 'string'],
         ];
     }
 }

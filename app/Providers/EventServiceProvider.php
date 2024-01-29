@@ -2,6 +2,14 @@
 
 namespace App\Providers;
 
+use App\Models\Book;
+use App\Models\Event;
+use App\Models\Gallery;
+use App\Models\HeroBanner;
+use App\Observers\BookObserver;
+use App\Observers\EventObserver;
+use App\Observers\GalleryObserver;
+use App\Observers\HeroBannerObserver;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -26,7 +34,10 @@ class EventServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Book::observe(BookObserver::class);
+        Event::observe(EventObserver::class);
+        Gallery::observe(GalleryObserver::class);
+        HeroBanner::observe(HeroBannerObserver::class);
     }
 
     /**

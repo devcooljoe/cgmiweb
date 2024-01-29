@@ -38,7 +38,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light cgmi___dashboard_nav">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{{ route('home') }}">Admin Dashboard</a>
+            <a class="navbar-brand" href="{{ route('home') }}">Dashboard</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -58,7 +58,6 @@
                                 {{ auth()->user()->name }}
                             </a>
                         @endauth
-
                     </li>
                 </ul>
             </div>
