@@ -45,20 +45,10 @@
             </button>
             <div class="collapse navbar-collapse cgmi___dashboard" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        @auth
-                            <form action="{{ route('logout') }}" method="post">
-                                @csrf
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><button class="dropdown-item btn-link" type="submit">Logout</button></li>
-                                </ul>
-                            </form>
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                {{ auth()->user()->name }}
-                            </a>
-                        @endauth
-                    </li>
+                    <form action="{{ route('logout') }}" method="post">
+                        @csrf
+                        <button class="dropdown-item btn-link" type="submit">Logout</button>
+                    </form>
                 </ul>
             </div>
         </div>

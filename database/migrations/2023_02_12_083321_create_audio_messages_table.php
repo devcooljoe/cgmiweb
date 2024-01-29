@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('audio_messages', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->string('embed');
+            $table->text('embed');
             $table->timestamps();
         });
     }

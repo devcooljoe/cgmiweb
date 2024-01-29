@@ -51,6 +51,13 @@
                             <li><a href="{{ route('contact') }}">Contact Us</a></li>
                             <li><a href="{{ route('book') }}">Library</a></li>
                             <li><a href="{{ route('donate') }}">Free Will Donation</a></li>
+                            @guest
+                                <li><a href="{{ route('login') }}">Login</a></li>
+                            @else
+                                @if (auth()->user()->admin())
+                                    <li><a href="{{ route('home') }}">Dashboard</a></li>
+                                @endif
+                            @endguest
                         </ul>
                     </div>
                 </nav>
@@ -90,6 +97,9 @@
                     <a href="{{ route('book') }}">Library</a><br>
                     <a href="/">Notifications</a><br>
                     <a href="{{ route('donate') }}">Free will Donation</a>
+                    @guest
+                        <a href="{{ route('login') }}">Login</a>
+                    @endguest
                 </div>
                 <div class="col-12 col-md-4 col-sm-4 col-xs-12">
                     <p class=""><img class="cgmi___footer_logo" src="/images/logo.png" class="img img-response"

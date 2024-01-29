@@ -36,7 +36,7 @@ Route::get('/library', [WelcomeController::class, 'book'])->middleware('auth')->
 Route::get('/contact-us', [WelcomeController::class, 'contact'])->name('contact');
 Route::get('/donate', [WelcomeController::class, 'donate'])->name('donate');
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::middleware(['auth', 'admin'])->get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::resource('/contact', ContactController::class);
 Route::resource('/newsletter', NewsletterController::class);

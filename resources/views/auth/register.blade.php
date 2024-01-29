@@ -73,10 +73,10 @@
 
                             <div class="row mb-0">
                                 <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
+                                    <button type="submit" class="btn btn-primary" style="margin-right:20px">
                                         {{ __('Register') }}
                                     </button>
-                                    <a class="btn btn-link" href="{{ route('login') }}">
+                                    <a href="{{ route('login') }}">
                                         {{ __('Already have an account? Login.') }}
                                     </a>
                                 </div>
